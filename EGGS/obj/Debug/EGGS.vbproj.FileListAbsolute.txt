@@ -1,0 +1,25 @@
+C:\Users\Gonzalo\AppData\Local\Temporary Projects\EGGS\bin\Debug\EGGS.exe.config
+C:\Users\Gonzalo\AppData\Local\Temporary Projects\EGGS\bin\Debug\EGGS.exe
+C:\Users\Gonzalo\AppData\Local\Temporary Projects\EGGS\bin\Debug\EGGS.pdb
+C:\Users\Gonzalo\AppData\Local\Temporary Projects\EGGS\bin\Debug\EGGS.xml
+C:\Users\Gonzalo\AppData\Local\Temporary Projects\EGGS\obj\Debug\EGGS.vbprojResolveAssemblyReference.cache
+C:\Users\Gonzalo\AppData\Local\Temporary Projects\EGGS\obj\Debug\EGGS.Resources.resources
+C:\Users\Gonzalo\AppData\Local\Temporary Projects\EGGS\obj\Debug\EGGS.vbproj.GenerateResource.Cache
+C:\Users\Gonzalo\AppData\Local\Temporary Projects\EGGS\obj\Debug\EGGS.exe
+C:\Users\Gonzalo\AppData\Local\Temporary Projects\EGGS\obj\Debug\EGGS.xml
+C:\Users\Gonzalo\AppData\Local\Temporary Projects\EGGS\obj\Debug\EGGS.pdb
+C:\Users\Gonzalo\AppData\Local\Temporary Projects\EGGS\obj\Debug\EGGS.frmSesion.resources
+G:\Proyectos\EGGS\EGGS\bin\Debug\EGGS.exe.config
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.exe
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.xml
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.pdb
+G:\Proyectos\EGGS\EGGS\bin\Debug\EGGS.exe
+G:\Proyectos\EGGS\EGGS\bin\Debug\EGGS.pdb
+G:\Proyectos\EGGS\EGGS\bin\Debug\EGGS.xml
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.vbprojResolveAssemblyReference.cache
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmSesion.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.Resources.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.vbproj.GenerateResource.Cache
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmPrincipal.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmCantidadGallinas.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmIngresoGallinasMuertas.resources
