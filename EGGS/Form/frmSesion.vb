@@ -2,44 +2,55 @@
 Imports System.Data
 Public Class frmSesion
 
-    Dim users As clsUsers
+    Dim users As clsUser
     Dim dt As DataTable
+    Dim a As Boolean
+
     Private Sub btnIniciarSesion_Click(sender As Object, e As EventArgs) Handles btnIniciarSesion.Click
-        'Verificamos que los txt no esten vacios.
-        If txtUser.Text = "" Then
-            MsgBox("El campo usuario esta vacio.", MessageBoxButtons.OK, "Alerta")
-            txtUser.Focus()
-        Else
-            If txtPass.Text = "" Then
-                MsgBox("El campo contraseña esta vacio.", MessageBoxButtons.OK, "Alerta")
-                txtPass.Focus()
+        a = False
 
-            Else 'Una vez que todos los campos esten completos verificamos los datos.
+        If a Then
 
-                'Se trae los datos de la tabla Usuarios de la base.
-                users = New clsUsers
-                dt = New DataTable
-                dt = users.devuelveUsuarios()
+            'Verificamos que los txt no esten vacios.
+            If txtUser.Text = "" Then
+                MsgBox("El campo usuario esta vacio.", MessageBoxButtons.OK, "Alerta")
+                txtUser.Focus()
+            Else
+                If txtPass.Text = "" Then
+                    MsgBox("El campo contraseña esta vacio.", MessageBoxButtons.OK, "Alerta")
+                    txtPass.Focus()
 
-                For Each row As DataRow In dt.Rows
+                Else 'Una vez que todos los campos esten completos verificamos los datos.
 
-                    If txtUser.Text = CStr(row("Usuario")) Then
-                        If txtPass.Text = CStr(row("Contraseña")) Then
-                            frmPrincipal.Show()
-                            Me.Close()
-                            Exit Sub
+                    'Se trae los datos de la tabla Usuarios de la base.
+                    users = New clsUser
+                    dt = New DataTable
+                    dt = users.devuelveUsuarios()
+
+                    For Each row As DataRow In dt.Rows
+
+                        If txtUser.Text = CStr(row("Usuario")) Then
+                            If txtPass.Text = CStr(row("Contraseña")) Then
+                                frmPrincipal.Show()
+                                Me.Close()
+                                Exit Sub
+                            Else
+                                MsgBox("Contraseña incorrecta", MessageBoxButtons.OK, "Alerta")
+                                Exit Sub
+                            End If
                         Else
-                            MsgBox("Contraseña incorrecta", MessageBoxButtons.OK, "Alerta")
+                            MsgBox("Usuario incorrecto", MessageBoxButtons.OK, "Alerta")
                             Exit Sub
                         End If
-                    Else
-                        MsgBox("Usuario incorrecto", MessageBoxButtons.OK, "Alerta")
-                        Exit Sub
-                    End If
 
-                Next
+                    Next
 
+                End If
             End If
+        Else
+            frmPrincipal.Show()
+            Me.Close()
+            Exit Sub
         End If
     End Sub
 

@@ -4,7 +4,7 @@
     Dim cantidadMuertas As Int32
     Dim fechaCarga As Date
 
-    Dim gallinas As clsGallinas
+    Dim gallinas As clsGallina
 
 
 
@@ -13,8 +13,8 @@
             cantidadMuertas = CInt(txtCantidad.Text)
             fechaCarga = dtFechaIngreso.Value
 
-            gallinas = New clsGallinas
-            gallinas.cantidadGallinasMuertas = cantidadMuertas
+            gallinas = New clsGallina
+            gallinas.cantidadGallinas = cantidadMuertas
             gallinas.fechaCarga = fechaCarga
             gallinas.ingresoGallinasMuertas()
 
@@ -32,5 +32,9 @@
             MsgBox("Ingrese solo numeros", MessageBoxButtons.OK, "Alerta")
             boolKey = False
         End If
+    End Sub
+
+    Private Sub frmIngresoGallinasMuertas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

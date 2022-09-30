@@ -1,0 +1,9 @@
+
+--SCRIPT PARA CORRER CUANDO SE PONGA EN MARCHA EL SISTEMA. 
+
+TRUNCATE TABLE RegistroGallinas
+INSERT INTO RegistroGallinas values (GETDATE(),0,0,0,0)
+TRUNCATE TABLE  StockHuevos
+INSERT INTO StockHuevos values (GETDATE(),0,0,0,null,null,0)
+
+

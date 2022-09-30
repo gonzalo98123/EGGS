@@ -6,6 +6,136 @@ EGGS
 </name>
 </assembly>
 <members>
+<member name="T:EGGS.EGGS1DataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:EGGS.EGGS1DataSet.vw_ComprobantesCajaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:EGGS.EGGS1DataSet.vw_ComprobantesCajaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:EGGS.EGGS1DataSet.vw_ComprobantesCajaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:EGGS.EGGS1DataSetTableAdapters.vw_ComprobantesCajaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:EGGS.EGGS1DataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:EGGS.EGGS1DataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(EGGS.EGGS1DataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:EGGS.EGGS1DataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(EGGS.EGGS1DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:EGGS.EGGS1DataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(EGGS.EGGS1DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:EGGS.EGGS1DataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:EGGS.EGGS1DataSetTableAdapters.TableAdapterManager.UpdateAll(EGGS.EGGS1DataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:EGGS.EGGS1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:EGGS.EGGS1DataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:EGGS.EGGSDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:EGGS.EGGSDataSet.vw_EgresoHuevosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:EGGS.EGGSDataSet.vw_EgresoHuevosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:EGGS.EGGSDataSet.vw_EgresoHuevosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:EGGS.EGGSDataSetTableAdapters.vw_EgresoHuevosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:EGGS.EGGSDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:EGGS.EGGSDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(EGGS.EGGSDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:EGGS.EGGSDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(EGGS.EGGSDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:EGGS.EGGSDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(EGGS.EGGSDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:EGGS.EGGSDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:EGGS.EGGSDataSetTableAdapters.TableAdapterManager.UpdateAll(EGGS.EGGSDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:EGGS.EGGSDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:EGGS.EGGSDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:EGGS.My.Resources.Resources">
 <summary>
   A strongly-typed resource class, for looking up localized strings, etc.

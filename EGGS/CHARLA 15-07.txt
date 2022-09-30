@@ -5,6 +5,9 @@ CUANTAS QUEDAN VIVAS
 
 en la base esta listo el ingreso de gallinas, falta form y  codigo de vb
 
+GALLINAS
+LISTAS
+
 
 
 2-HUEVOS

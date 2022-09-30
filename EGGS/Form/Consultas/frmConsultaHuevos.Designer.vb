@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmCantidadGallinas
+Partial Class frmConsultaHuevos
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,65 +23,66 @@ Partial Class frmCantidadGallinas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblCantidadVivas = New System.Windows.Forms.Label()
+        Me.lblCantidad = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblUltimaCarga = New System.Windows.Forms.Label()
+        Me.lblFecha = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(21, 22)
+        Me.Label1.Location = New System.Drawing.Point(52, 43)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 13)
+        Me.Label1.Size = New System.Drawing.Size(137, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Gallinas vivas:"
+        Me.Label1.Text = "Cantidad actual de huevos:"
         '
-        'lblCantidadVivas
+        'lblCantidad
         '
-        Me.lblCantidadVivas.AutoSize = True
-        Me.lblCantidadVivas.Location = New System.Drawing.Point(102, 22)
-        Me.lblCantidadVivas.Name = "lblCantidadVivas"
-        Me.lblCantidadVivas.Size = New System.Drawing.Size(39, 13)
-        Me.lblCantidadVivas.TabIndex = 2
-        Me.lblCantidadVivas.Text = "Label3"
+        Me.lblCantidad.AutoSize = True
+        Me.lblCantidad.Location = New System.Drawing.Point(195, 43)
+        Me.lblCantidad.Name = "lblCantidad"
+        Me.lblCantidad.Size = New System.Drawing.Size(39, 13)
+        Me.lblCantidad.TabIndex = 1
+        Me.lblCantidad.Text = "Label2"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 65)
+        Me.Label2.Location = New System.Drawing.Point(36, 72)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Ultima carga el:"
+        Me.Label2.Size = New System.Drawing.Size(153, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Ultima actualizacion registrada:"
         '
-        'lblUltimaCarga
+        'lblFecha
         '
-        Me.lblUltimaCarga.AutoSize = True
-        Me.lblUltimaCarga.Location = New System.Drawing.Point(105, 65)
-        Me.lblUltimaCarga.Name = "lblUltimaCarga"
-        Me.lblUltimaCarga.Size = New System.Drawing.Size(39, 13)
-        Me.lblUltimaCarga.TabIndex = 4
-        Me.lblUltimaCarga.Text = "Label3"
+        Me.lblFecha.AutoSize = True
+        Me.lblFecha.Location = New System.Drawing.Point(196, 72)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(39, 13)
+        Me.lblFecha.TabIndex = 3
+        Me.lblFecha.Text = "Label3"
         '
-        'frmCantidadGallinas
+        'frmConsultaHuevos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(327, 151)
-        Me.Controls.Add(Me.lblUltimaCarga)
+        Me.ClientSize = New System.Drawing.Size(382, 176)
+        Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.lblCantidadVivas)
+        Me.Controls.Add(Me.lblCantidad)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "frmCantidadGallinas"
-        Me.Text = "frmCantidadGallinas"
+        Me.Name = "frmConsultaHuevos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "frmConsultaHuevos"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents lblCantidadVivas As Label
+    Friend WithEvents lblCantidad As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents lblUltimaCarga As Label
+    Friend WithEvents lblFecha As Label
 End Class

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EGGS1DataSet" targetNamespace="http://tempuri.org/EGGS1DataSet.xsd" xmlns:mstns="http://tempuri.org/EGGS1DataSet.xsd" xmlns="http://tempuri.org/EGGS1DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="EGGSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EGGSConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.EGGS.My.MySettings.GlobalReference.Default.EGGSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_ComprobantesCajaTableAdapter" GeneratorDataComponentClassName="vw_ComprobantesCajaTableAdapter" Name="vw_ComprobantesCaja" UserDataComponentName="vw_ComprobantesCajaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EGGSConnectionString (MySettings)" DbObjectName="EGGS1.dbo.vw_ComprobantesCaja" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FechaComprobante, TipoComprobante, Comprobante, Total, Usuario, tipo FROM vw_ComprobantesCaja</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FechaComprobante" DataSetColumn="FechaComprobante" />
+              <Mapping SourceColumn="TipoComprobante" DataSetColumn="TipoComprobante" />
+              <Mapping SourceColumn="Comprobante" DataSetColumn="Comprobante" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
+              <Mapping SourceColumn="tipo" DataSetColumn="tipo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EGGS1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="EGGS1DataSet" msprop:Generator_UserDSName="EGGS1DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_ComprobantesCaja" msprop:Generator_TableClassName="vw_ComprobantesCajaDataTable" msprop:Generator_TableVarName="tablevw_ComprobantesCaja" msprop:Generator_RowChangedName="vw_ComprobantesCajaRowChanged" msprop:Generator_TablePropName="vw_ComprobantesCaja" msprop:Generator_RowDeletingName="vw_ComprobantesCajaRowDeleting" msprop:Generator_RowChangingName="vw_ComprobantesCajaRowChanging" msprop:Generator_RowEvHandlerName="vw_ComprobantesCajaRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_ComprobantesCajaRowDeleted" msprop:Generator_RowClassName="vw_ComprobantesCajaRow" msprop:Generator_UserTableName="vw_ComprobantesCaja" msprop:Generator_RowEvArgName="vw_ComprobantesCajaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FechaComprobante" msprop:Generator_ColumnVarNameInTable="columnFechaComprobante" msprop:Generator_ColumnPropNameInRow="FechaComprobante" msprop:Generator_ColumnPropNameInTable="FechaComprobanteColumn" msprop:Generator_UserColumnName="FechaComprobante" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TipoComprobante" msprop:Generator_ColumnVarNameInTable="columnTipoComprobante" msprop:Generator_ColumnPropNameInRow="TipoComprobante" msprop:Generator_ColumnPropNameInTable="TipoComprobanteColumn" msprop:Generator_UserColumnName="TipoComprobante" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Comprobante" msprop:Generator_ColumnVarNameInTable="columnComprobante" msprop:Generator_ColumnPropNameInRow="Comprobante" msprop:Generator_ColumnPropNameInTable="ComprobanteColumn" msprop:Generator_UserColumnName="Comprobante" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntipo" msprop:Generator_ColumnPropNameInRow="tipo" msprop:Generator_ColumnPropNameInTable="tipoColumn" msprop:Generator_UserColumnName="tipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

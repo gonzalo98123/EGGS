@@ -1,0 +1,15 @@
+a la hora de exportar huevos
+vendedores (sus chicos) 
+cliente (verduleria cualquiera)
+
+
+AGRO
+
+CAMPAÑA 
+
+SOJA -----> CANTIDAD DE COMBUSTIBLE QUE SE GASTA -----> CUANTOS LITROS SE GASTA , PRECIO EN ESE PERIODO
+
+TABLA GASTOS HACER
+
+ABM COMBUSTIBLE
+ABM AGROQUIMICOS

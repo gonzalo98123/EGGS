@@ -23,3 +23,15 @@ G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.vbproj.GenerateResource.Cache
 G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmPrincipal.resources
 G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmCantidadGallinas.resources
 G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmIngresoGallinasMuertas.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmIngresoGallinasVivas.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmConsultaHuevos.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmVendedores.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmEgresoHuevos.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmClientes.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmIngresoHuevos.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmConsultaEgresoHuevos.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmAperturaCaja.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmTiposGastos.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmIngesoComprobante.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmCierreDeCaja.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmConsultaComprobantesCaja.resources

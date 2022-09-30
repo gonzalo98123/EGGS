@@ -1,0 +1,1 @@
+"Data Source=DESKTOP-CIB583E\DEFQON1GONZALO;Initial Catalog=EGGS;Persist Security Info=True;User ID=sa;Password=gon140498;"
