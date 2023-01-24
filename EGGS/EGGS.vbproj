@@ -152,6 +152,12 @@
     <Compile Include="Form\Egresos\frmEgresoHuevos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\frmPrincipalDef.Designer.vb">
+      <DependentUpon>frmPrincipalDef.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmPrincipalDef.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\Ingresos\frmIngesoComprobante.Designer.vb">
       <DependentUpon>frmIngesoComprobante.vb</DependentUpon>
     </Compile>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Egresos\frmEgresoHuevos.resx">
       <DependentUpon>frmEgresoHuevos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmPrincipalDef.resx">
+      <DependentUpon>frmPrincipalDef.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Ingresos\frmIngesoComprobante.resx">
       <DependentUpon>frmIngesoComprobante.vb</DependentUpon>

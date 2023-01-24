@@ -9,6 +9,9 @@ Public Class clsComprobanteAvicola
     Private _TOTAL As Double
     Private ES_EGRESO As Boolean
 
+    Dim dt As DataTable
+    Dim da As SqlDataAdapter
+
     Public Property idComprobante As Integer
         Get
             Return ID_COMPROBANTE
@@ -104,5 +107,23 @@ Public Class clsComprobanteAvicola
             disconnect()
         End Try
     End Sub
+
+
+    Public Function devuelveNoPagos()
+        connect()
+        dt = New DataTable
+        da = New SqlDataAdapter
+
+        comm = New SqlCommand("sp_DevuelveNoPagos", conn)
+        comm.CommandType = CommandType.StoredProcedure
+        comm.Connection = conn
+
+        da = New SqlDataAdapter(comm.CommandText, conn)
+        da.Fill(dt)
+
+        disconnect()
+        Return dt
+
+    End Function
 
 End Class

@@ -35,3 +35,5 @@ G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmTiposGastos.resources
 G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmIngesoComprobante.resources
 G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmCierreDeCaja.resources
 G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmConsultaComprobantesCaja.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmPendientesPagos.resources
+G:\Proyectos\EGGS\EGGS\obj\Debug\EGGS.frmPrincipalDef.resources

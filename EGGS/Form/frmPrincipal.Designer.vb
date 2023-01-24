@@ -176,11 +176,11 @@ Partial Class frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightCoral
+        Me.BackColor = System.Drawing.Color.DarkSlateGray
         Me.ClientSize = New System.Drawing.Size(951, 602)
-        Me.ControlBox = False
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
         Me.Name = "frmPrincipal"
         Me.Text = "EGGS"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
