@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmPrincipalDef
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,87 +20,322 @@ Partial Class frmPrincipalDef
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.pnlLateral = New System.Windows.Forms.Panel()
-        Me.pnlLogo = New System.Windows.Forms.Panel()
-        Me.btnAvicola = New System.Windows.Forms.Button()
-        Me.pnlAvicola = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.pnlCajaChica = New System.Windows.Forms.Panel()
+        Me.btnCierreCaja = New System.Windows.Forms.Button()
+        Me.btnIngresoComprobantes = New System.Windows.Forms.Button()
+        Me.btnAperturaCaja = New System.Windows.Forms.Button()
+        Me.btnCajaChica = New System.Windows.Forms.Button()
+        Me.btnTiposGastos = New System.Windows.Forms.Button()
+        Me.btnClientes = New System.Windows.Forms.Button()
+        Me.btnVendedores = New System.Windows.Forms.Button()
+        Me.pnlHuevos = New System.Windows.Forms.Panel()
+        Me.btnPagosPendientes = New System.Windows.Forms.Button()
+        Me.btnConsultarEgresos = New System.Windows.Forms.Button()
+        Me.btnStockHuevos = New System.Windows.Forms.Button()
+        Me.btnExportarVender = New System.Windows.Forms.Button()
+        Me.btnIngresoHuevos = New System.Windows.Forms.Button()
+        Me.btnHuevos = New System.Windows.Forms.Button()
+        Me.pnlGallinas = New System.Windows.Forms.Panel()
+        Me.btnConsultarStockGallinas = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.btnIngresoGallinas = New System.Windows.Forms.Button()
+        Me.btnGallinas = New System.Windows.Forms.Button()
+        Me.pnlLogo = New System.Windows.Forms.Panel()
+        Me.btnIngresoGallinasMuertas = New System.Windows.Forms.Panel()
         Me.pnlLateral.SuspendLayout()
-        Me.pnlAvicola.SuspendLayout()
+        Me.pnlCajaChica.SuspendLayout()
+        Me.pnlHuevos.SuspendLayout()
+        Me.pnlGallinas.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlLateral
         '
         Me.pnlLateral.AutoScroll = True
         Me.pnlLateral.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer))
-        Me.pnlLateral.Controls.Add(Me.pnlAvicola)
-        Me.pnlLateral.Controls.Add(Me.btnAvicola)
+        Me.pnlLateral.Controls.Add(Me.pnlCajaChica)
+        Me.pnlLateral.Controls.Add(Me.btnCajaChica)
+        Me.pnlLateral.Controls.Add(Me.btnTiposGastos)
+        Me.pnlLateral.Controls.Add(Me.btnClientes)
+        Me.pnlLateral.Controls.Add(Me.btnVendedores)
+        Me.pnlLateral.Controls.Add(Me.pnlHuevos)
+        Me.pnlLateral.Controls.Add(Me.btnHuevos)
+        Me.pnlLateral.Controls.Add(Me.pnlGallinas)
+        Me.pnlLateral.Controls.Add(Me.btnGallinas)
         Me.pnlLateral.Controls.Add(Me.pnlLogo)
         Me.pnlLateral.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnlLateral.Location = New System.Drawing.Point(0, 0)
+        Me.pnlLateral.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.pnlLateral.Name = "pnlLateral"
-        Me.pnlLateral.Size = New System.Drawing.Size(250, 561)
+        Me.pnlLateral.Size = New System.Drawing.Size(375, 814)
         Me.pnlLateral.TabIndex = 0
         '
-        'pnlLogo
+        'pnlCajaChica
         '
-        Me.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlLogo.Location = New System.Drawing.Point(0, 0)
-        Me.pnlLogo.Name = "pnlLogo"
-        Me.pnlLogo.Size = New System.Drawing.Size(250, 100)
-        Me.pnlLogo.TabIndex = 0
+        Me.pnlCajaChica.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.pnlCajaChica.Controls.Add(Me.btnCierreCaja)
+        Me.pnlCajaChica.Controls.Add(Me.btnIngresoComprobantes)
+        Me.pnlCajaChica.Controls.Add(Me.btnAperturaCaja)
+        Me.pnlCajaChica.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlCajaChica.Location = New System.Drawing.Point(0, 971)
+        Me.pnlCajaChica.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.pnlCajaChica.Name = "pnlCajaChica"
+        Me.pnlCajaChica.Size = New System.Drawing.Size(358, 168)
+        Me.pnlCajaChica.TabIndex = 10
         '
-        'btnAvicola
+        'btnCierreCaja
         '
-        Me.btnAvicola.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnAvicola.FlatAppearance.BorderSize = 0
-        Me.btnAvicola.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAvicola.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btnAvicola.Location = New System.Drawing.Point(0, 100)
-        Me.btnAvicola.Name = "btnAvicola"
-        Me.btnAvicola.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.btnAvicola.Size = New System.Drawing.Size(250, 45)
-        Me.btnAvicola.TabIndex = 1
-        Me.btnAvicola.Text = "Avicola"
-        Me.btnAvicola.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAvicola.UseVisualStyleBackColor = True
+        Me.btnCierreCaja.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnCierreCaja.FlatAppearance.BorderSize = 0
+        Me.btnCierreCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCierreCaja.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnCierreCaja.Location = New System.Drawing.Point(0, 110)
+        Me.btnCierreCaja.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnCierreCaja.Name = "btnCierreCaja"
+        Me.btnCierreCaja.Padding = New System.Windows.Forms.Padding(51, 0, 0, 0)
+        Me.btnCierreCaja.Size = New System.Drawing.Size(358, 58)
+        Me.btnCierreCaja.TabIndex = 2
+        Me.btnCierreCaja.Text = "Cierre de caja"
+        Me.btnCierreCaja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCierreCaja.UseVisualStyleBackColor = True
         '
-        'pnlAvicola
+        'btnIngresoComprobantes
         '
-        Me.pnlAvicola.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.pnlAvicola.Controls.Add(Me.Button6)
-        Me.pnlAvicola.Controls.Add(Me.Button5)
-        Me.pnlAvicola.Controls.Add(Me.Button4)
-        Me.pnlAvicola.Controls.Add(Me.Button3)
-        Me.pnlAvicola.Controls.Add(Me.Button2)
-        Me.pnlAvicola.Controls.Add(Me.Button1)
-        Me.pnlAvicola.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlAvicola.Location = New System.Drawing.Point(0, 145)
-        Me.pnlAvicola.Name = "pnlAvicola"
-        Me.pnlAvicola.Size = New System.Drawing.Size(250, 248)
-        Me.pnlAvicola.TabIndex = 2
+        Me.btnIngresoComprobantes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnIngresoComprobantes.FlatAppearance.BorderSize = 0
+        Me.btnIngresoComprobantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnIngresoComprobantes.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnIngresoComprobantes.Location = New System.Drawing.Point(0, 55)
+        Me.btnIngresoComprobantes.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnIngresoComprobantes.Name = "btnIngresoComprobantes"
+        Me.btnIngresoComprobantes.Padding = New System.Windows.Forms.Padding(51, 0, 0, 0)
+        Me.btnIngresoComprobantes.Size = New System.Drawing.Size(358, 55)
+        Me.btnIngresoComprobantes.TabIndex = 1
+        Me.btnIngresoComprobantes.Text = "Ingreso de comprobantes"
+        Me.btnIngresoComprobantes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnIngresoComprobantes.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnAperturaCaja
         '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button1.Size = New System.Drawing.Size(250, 40)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAperturaCaja.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnAperturaCaja.FlatAppearance.BorderSize = 0
+        Me.btnAperturaCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAperturaCaja.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnAperturaCaja.Location = New System.Drawing.Point(0, 0)
+        Me.btnAperturaCaja.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnAperturaCaja.Name = "btnAperturaCaja"
+        Me.btnAperturaCaja.Padding = New System.Windows.Forms.Padding(51, 0, 0, 0)
+        Me.btnAperturaCaja.Size = New System.Drawing.Size(358, 55)
+        Me.btnAperturaCaja.TabIndex = 0
+        Me.btnAperturaCaja.Text = "Apertura De Caja"
+        Me.btnAperturaCaja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAperturaCaja.UseVisualStyleBackColor = True
+        '
+        'btnCajaChica
+        '
+        Me.btnCajaChica.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnCajaChica.FlatAppearance.BorderSize = 0
+        Me.btnCajaChica.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCajaChica.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnCajaChica.Location = New System.Drawing.Point(0, 909)
+        Me.btnCajaChica.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnCajaChica.Name = "btnCajaChica"
+        Me.btnCajaChica.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
+        Me.btnCajaChica.Size = New System.Drawing.Size(358, 62)
+        Me.btnCajaChica.TabIndex = 9
+        Me.btnCajaChica.Text = "Caja Chica"
+        Me.btnCajaChica.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCajaChica.UseVisualStyleBackColor = True
+        '
+        'btnTiposGastos
+        '
+        Me.btnTiposGastos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnTiposGastos.FlatAppearance.BorderSize = 0
+        Me.btnTiposGastos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTiposGastos.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnTiposGastos.Location = New System.Drawing.Point(0, 847)
+        Me.btnTiposGastos.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnTiposGastos.Name = "btnTiposGastos"
+        Me.btnTiposGastos.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
+        Me.btnTiposGastos.Size = New System.Drawing.Size(358, 62)
+        Me.btnTiposGastos.TabIndex = 8
+        Me.btnTiposGastos.Text = "Tipos De Gastos"
+        Me.btnTiposGastos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnTiposGastos.UseVisualStyleBackColor = True
+        '
+        'btnClientes
+        '
+        Me.btnClientes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnClientes.FlatAppearance.BorderSize = 0
+        Me.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClientes.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnClientes.Location = New System.Drawing.Point(0, 785)
+        Me.btnClientes.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnClientes.Name = "btnClientes"
+        Me.btnClientes.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
+        Me.btnClientes.Size = New System.Drawing.Size(358, 62)
+        Me.btnClientes.TabIndex = 7
+        Me.btnClientes.Text = "Clientes"
+        Me.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClientes.UseVisualStyleBackColor = True
+        '
+        'btnVendedores
+        '
+        Me.btnVendedores.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnVendedores.FlatAppearance.BorderSize = 0
+        Me.btnVendedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVendedores.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnVendedores.Location = New System.Drawing.Point(0, 723)
+        Me.btnVendedores.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnVendedores.Name = "btnVendedores"
+        Me.btnVendedores.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
+        Me.btnVendedores.Size = New System.Drawing.Size(358, 62)
+        Me.btnVendedores.TabIndex = 6
+        Me.btnVendedores.Text = "Vendedores"
+        Me.btnVendedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnVendedores.UseVisualStyleBackColor = True
+        '
+        'pnlHuevos
+        '
+        Me.pnlHuevos.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.pnlHuevos.Controls.Add(Me.btnPagosPendientes)
+        Me.pnlHuevos.Controls.Add(Me.btnConsultarEgresos)
+        Me.pnlHuevos.Controls.Add(Me.btnStockHuevos)
+        Me.pnlHuevos.Controls.Add(Me.btnExportarVender)
+        Me.pnlHuevos.Controls.Add(Me.btnIngresoHuevos)
+        Me.pnlHuevos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlHuevos.Location = New System.Drawing.Point(0, 439)
+        Me.pnlHuevos.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.pnlHuevos.Name = "pnlHuevos"
+        Me.pnlHuevos.Size = New System.Drawing.Size(358, 284)
+        Me.pnlHuevos.TabIndex = 5
+        '
+        'btnPagosPendientes
+        '
+        Me.btnPagosPendientes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnPagosPendientes.FlatAppearance.BorderSize = 0
+        Me.btnPagosPendientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPagosPendientes.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnPagosPendientes.Location = New System.Drawing.Point(0, 220)
+        Me.btnPagosPendientes.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnPagosPendientes.Name = "btnPagosPendientes"
+        Me.btnPagosPendientes.Padding = New System.Windows.Forms.Padding(51, 0, 0, 0)
+        Me.btnPagosPendientes.Size = New System.Drawing.Size(358, 55)
+        Me.btnPagosPendientes.TabIndex = 4
+        Me.btnPagosPendientes.Text = "Pagos Pendientes"
+        Me.btnPagosPendientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPagosPendientes.UseVisualStyleBackColor = True
+        '
+        'btnConsultarEgresos
+        '
+        Me.btnConsultarEgresos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnConsultarEgresos.FlatAppearance.BorderSize = 0
+        Me.btnConsultarEgresos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConsultarEgresos.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnConsultarEgresos.Location = New System.Drawing.Point(0, 165)
+        Me.btnConsultarEgresos.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnConsultarEgresos.Name = "btnConsultarEgresos"
+        Me.btnConsultarEgresos.Padding = New System.Windows.Forms.Padding(51, 0, 0, 0)
+        Me.btnConsultarEgresos.Size = New System.Drawing.Size(358, 55)
+        Me.btnConsultarEgresos.TabIndex = 3
+        Me.btnConsultarEgresos.Text = "Consultar Egresos"
+        Me.btnConsultarEgresos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnConsultarEgresos.UseVisualStyleBackColor = True
+        '
+        'btnStockHuevos
+        '
+        Me.btnStockHuevos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnStockHuevos.FlatAppearance.BorderSize = 0
+        Me.btnStockHuevos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnStockHuevos.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnStockHuevos.Location = New System.Drawing.Point(0, 110)
+        Me.btnStockHuevos.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnStockHuevos.Name = "btnStockHuevos"
+        Me.btnStockHuevos.Padding = New System.Windows.Forms.Padding(51, 0, 0, 0)
+        Me.btnStockHuevos.Size = New System.Drawing.Size(358, 55)
+        Me.btnStockHuevos.TabIndex = 2
+        Me.btnStockHuevos.Text = "Consultar Stock"
+        Me.btnStockHuevos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnStockHuevos.UseVisualStyleBackColor = True
+        '
+        'btnExportarVender
+        '
+        Me.btnExportarVender.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnExportarVender.FlatAppearance.BorderSize = 0
+        Me.btnExportarVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExportarVender.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnExportarVender.Location = New System.Drawing.Point(0, 55)
+        Me.btnExportarVender.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnExportarVender.Name = "btnExportarVender"
+        Me.btnExportarVender.Padding = New System.Windows.Forms.Padding(51, 0, 0, 0)
+        Me.btnExportarVender.Size = New System.Drawing.Size(358, 55)
+        Me.btnExportarVender.TabIndex = 1
+        Me.btnExportarVender.Text = "Exportar / Vender"
+        Me.btnExportarVender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExportarVender.UseVisualStyleBackColor = True
+        '
+        'btnIngresoHuevos
+        '
+        Me.btnIngresoHuevos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnIngresoHuevos.FlatAppearance.BorderSize = 0
+        Me.btnIngresoHuevos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnIngresoHuevos.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnIngresoHuevos.Location = New System.Drawing.Point(0, 0)
+        Me.btnIngresoHuevos.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnIngresoHuevos.Name = "btnIngresoHuevos"
+        Me.btnIngresoHuevos.Padding = New System.Windows.Forms.Padding(51, 0, 0, 0)
+        Me.btnIngresoHuevos.Size = New System.Drawing.Size(358, 55)
+        Me.btnIngresoHuevos.TabIndex = 0
+        Me.btnIngresoHuevos.Text = "Ingreso Huevos"
+        Me.btnIngresoHuevos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnIngresoHuevos.UseVisualStyleBackColor = True
+        '
+        'btnHuevos
+        '
+        Me.btnHuevos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnHuevos.FlatAppearance.BorderSize = 0
+        Me.btnHuevos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHuevos.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnHuevos.Location = New System.Drawing.Point(0, 377)
+        Me.btnHuevos.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnHuevos.Name = "btnHuevos"
+        Me.btnHuevos.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
+        Me.btnHuevos.Size = New System.Drawing.Size(358, 62)
+        Me.btnHuevos.TabIndex = 4
+        Me.btnHuevos.Text = "Huevos"
+        Me.btnHuevos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHuevos.UseVisualStyleBackColor = True
+        '
+        'pnlGallinas
+        '
+        Me.pnlGallinas.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.pnlGallinas.Controls.Add(Me.btnConsultarStockGallinas)
+        Me.pnlGallinas.Controls.Add(Me.Button2)
+        Me.pnlGallinas.Controls.Add(Me.btnIngresoGallinas)
+        Me.pnlGallinas.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlGallinas.Location = New System.Drawing.Point(0, 202)
+        Me.pnlGallinas.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.pnlGallinas.Name = "pnlGallinas"
+        Me.pnlGallinas.Size = New System.Drawing.Size(358, 175)
+        Me.pnlGallinas.TabIndex = 2
+        '
+        'btnConsultarStockGallinas
+        '
+        Me.btnConsultarStockGallinas.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnConsultarStockGallinas.FlatAppearance.BorderSize = 0
+        Me.btnConsultarStockGallinas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConsultarStockGallinas.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnConsultarStockGallinas.Location = New System.Drawing.Point(0, 110)
+        Me.btnConsultarStockGallinas.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnConsultarStockGallinas.Name = "btnConsultarStockGallinas"
+        Me.btnConsultarStockGallinas.Padding = New System.Windows.Forms.Padding(51, 0, 0, 0)
+        Me.btnConsultarStockGallinas.Size = New System.Drawing.Size(358, 55)
+        Me.btnConsultarStockGallinas.TabIndex = 2
+        Me.btnConsultarStockGallinas.Text = "Consultar Stock "
+        Me.btnConsultarStockGallinas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnConsultarStockGallinas.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -108,99 +343,118 @@ Partial Class frmPrincipalDef
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Button2.Location = New System.Drawing.Point(0, 40)
+        Me.Button2.Location = New System.Drawing.Point(0, 55)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button2.Size = New System.Drawing.Size(250, 40)
+        Me.Button2.Padding = New System.Windows.Forms.Padding(51, 0, 0, 0)
+        Me.Button2.Size = New System.Drawing.Size(358, 55)
         Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "Ingreso de Gallinas Muertas"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnIngresoGallinas
         '
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Button3.Location = New System.Drawing.Point(0, 80)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button3.Size = New System.Drawing.Size(250, 40)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Button3"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnIngresoGallinas.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnIngresoGallinas.FlatAppearance.BorderSize = 0
+        Me.btnIngresoGallinas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnIngresoGallinas.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnIngresoGallinas.Location = New System.Drawing.Point(0, 0)
+        Me.btnIngresoGallinas.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnIngresoGallinas.Name = "btnIngresoGallinas"
+        Me.btnIngresoGallinas.Padding = New System.Windows.Forms.Padding(51, 0, 0, 0)
+        Me.btnIngresoGallinas.Size = New System.Drawing.Size(358, 55)
+        Me.btnIngresoGallinas.TabIndex = 0
+        Me.btnIngresoGallinas.Text = "Ingreso de Gallinas"
+        Me.btnIngresoGallinas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnIngresoGallinas.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnGallinas
         '
-        Me.Button4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Button4.Location = New System.Drawing.Point(0, 120)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button4.Size = New System.Drawing.Size(250, 40)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Button4"
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnGallinas.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnGallinas.FlatAppearance.BorderSize = 0
+        Me.btnGallinas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGallinas.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnGallinas.Location = New System.Drawing.Point(0, 140)
+        Me.btnGallinas.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnGallinas.Name = "btnGallinas"
+        Me.btnGallinas.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
+        Me.btnGallinas.Size = New System.Drawing.Size(358, 62)
+        Me.btnGallinas.TabIndex = 1
+        Me.btnGallinas.Text = "Gallinas"
+        Me.btnGallinas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGallinas.UseVisualStyleBackColor = True
         '
-        'Button5
+        'pnlLogo
         '
-        Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Button5.Location = New System.Drawing.Point(0, 160)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button5.Size = New System.Drawing.Size(250, 40)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "Button5"
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.pnlLogo.BackgroundImage = Global.EGGS.My.Resources.Resources.pngwing_com
+        Me.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlLogo.Location = New System.Drawing.Point(0, 0)
+        Me.pnlLogo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.pnlLogo.Name = "pnlLogo"
+        Me.pnlLogo.Size = New System.Drawing.Size(358, 140)
+        Me.pnlLogo.TabIndex = 0
         '
-        'Button6
+        'btnIngresoGallinasMuertas
         '
-        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Button6.Location = New System.Drawing.Point(0, 200)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button6.Size = New System.Drawing.Size(250, 40)
-        Me.Button6.TabIndex = 5
-        Me.Button6.Text = "Button6"
-        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.btnIngresoGallinasMuertas.BackColor = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.btnIngresoGallinasMuertas.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnIngresoGallinasMuertas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer))
+        Me.btnIngresoGallinasMuertas.Location = New System.Drawing.Point(375, 0)
+        Me.btnIngresoGallinasMuertas.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnIngresoGallinasMuertas.Name = "btnIngresoGallinasMuertas"
+        Me.btnIngresoGallinasMuertas.Size = New System.Drawing.Size(1042, 814)
+        Me.btnIngresoGallinasMuertas.TabIndex = 1
         '
         'frmPrincipalDef
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(934, 561)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.ClientSize = New System.Drawing.Size(1417, 814)
+        Me.Controls.Add(Me.btnIngresoGallinasMuertas)
         Me.Controls.Add(Me.pnlLateral)
-        Me.MinimumSize = New System.Drawing.Size(950, 600)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(1417, 814)
         Me.Name = "frmPrincipalDef"
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmPrincipalDef"
+        Me.Text = "EGGS"
+        Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.pnlLateral.ResumeLayout(False)
-        Me.pnlAvicola.ResumeLayout(False)
+        Me.pnlCajaChica.ResumeLayout(False)
+        Me.pnlHuevos.ResumeLayout(False)
+        Me.pnlGallinas.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents pnlLateral As Panel
-    Friend WithEvents pnlAvicola As Panel
-    Friend WithEvents btnAvicola As Button
+    Friend WithEvents pnlGallinas As Panel
+    Friend WithEvents btnGallinas As Button
     Friend WithEvents pnlLogo As Panel
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnConsultarStockGallinas As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents btnIngresoGallinas As Button
+    Friend WithEvents btnIngresoGallinasMuertas As Panel
+    Friend WithEvents pnlHuevos As Panel
+    Friend WithEvents btnStockHuevos As Button
+    Friend WithEvents btnExportarVender As Button
+    Friend WithEvents btnIngresoHuevos As Button
+    Friend WithEvents btnHuevos As Button
+    Friend WithEvents btnPagosPendientes As Button
+    Friend WithEvents btnConsultarEgresos As Button
+    Friend WithEvents btnTiposGastos As Button
+    Friend WithEvents btnClientes As Button
+    Friend WithEvents btnVendedores As Button
+    Friend WithEvents pnlCajaChica As Panel
+    Friend WithEvents btnCierreCaja As Button
+    Friend WithEvents btnIngresoComprobantes As Button
+    Friend WithEvents btnAperturaCaja As Button
+    Friend WithEvents btnCajaChica As Button
 End Class

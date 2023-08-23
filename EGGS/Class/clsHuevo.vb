@@ -5,6 +5,7 @@ Public Class clsHuevo
     Dim dt As DataTable
     Dim da As SqlDataAdapter
 
+    Private ID_MOVIMIENTO_HUEVOS As Integer
     Private FECHA_CARGA As Date
     Private CANTIDAD_HUEVOS As Integer
     Private ID_VENDEDOR As Integer
@@ -13,6 +14,15 @@ Public Class clsHuevo
     Private _PAGADO As Boolean
     Private _OBSERVACIONES As String
 
+    Public Property idMovimientoHuevos As Integer
+        Get
+            Return ID_MOVIMIENTO_HUEVOS
+        End Get
+
+        Set(value As Integer)
+            ID_MOVIMIENTO_HUEVOS = value
+        End Set
+    End Property
 
     Public Property fechaCarga As Date
         Get
@@ -142,4 +152,40 @@ Public Class clsHuevo
     End Sub
 
 
+    Public Sub marcarPagoComprobante()
+        Try
+            connect()
+            'ingresamos el metodo con los parametros correspondientes
+            comm = New SqlCommand("sp_MarcarPagoComprobante", conn)
+            comm.CommandType = CommandType.StoredProcedure
+            'Parametros para el stored procedure
+            comm.Parameters.AddWithValue("@Id", ID_MOVIMIENTO_HUEVOS)
+
+
+            'ejecuta
+            comm.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            disconnect()
+        End Try
+    End Sub
+
+    Public Function devuelveNoPagoPorId()
+        connect()
+        dt = New DataTable
+        da = New SqlDataAdapter
+
+        comm = New SqlCommand("sp_DevuelveMovimientoNoPagoPorID", conn)
+        comm.CommandType = CommandType.StoredProcedure
+        comm.Parameters.AddWithValue("@Id", ID_MOVIMIENTO_HUEVOS)
+
+        da = New SqlDataAdapter(comm.CommandText, conn)
+        da.Fill(dt)
+
+        disconnect()
+        Return dt
+
+    End Function
 End Class

@@ -121,6 +121,7 @@ Public Class clsTempCaja
             comm.Parameters.AddWithValue("@FechaCierre", "01/01/1960")
             comm.Parameters.AddWithValue("@MontoCierre", 0)
             comm.Parameters.AddWithValue("@TotalDisponible", MONTO_APERTURA)
+            comm.Parameters.AddWithValue("@NumeroCaja", 0)
             'ejecuta
             comm.ExecuteNonQuery()
 

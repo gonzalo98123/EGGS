@@ -114,9 +114,8 @@ Public Class clsComprobanteAvicola
         dt = New DataTable
         da = New SqlDataAdapter
 
-        comm = New SqlCommand("sp_DevuelveNoPagos", conn)
+        comm = New SqlCommand("vw_ComprobantesCaja", conn)
         comm.CommandType = CommandType.StoredProcedure
-        comm.Connection = conn
 
         da = New SqlDataAdapter(comm.CommandText, conn)
         da.Fill(dt)
@@ -125,5 +124,8 @@ Public Class clsComprobanteAvicola
         Return dt
 
     End Function
+
+
+
 
 End Class

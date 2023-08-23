@@ -26,6 +26,8 @@ Partial Class frmClientes
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.pnlDatos = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtObservaciones = New System.Windows.Forms.TextBox()
         Me.btnCancelar = New System.Windows.Forms.Button()
@@ -37,34 +39,38 @@ Partial Class frmClientes
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.txtRazonSocial = New System.Windows.Forms.TextBox()
         Me.lstClientes = New System.Windows.Forms.ListBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.pnlDatos.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(12, 350)
+        Me.btnEditar.ForeColor = System.Drawing.Color.Black
+        Me.btnEditar.Location = New System.Drawing.Point(135, 403)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEditar.Size = New System.Drawing.Size(112, 32)
         Me.btnEditar.TabIndex = 9
         Me.btnEditar.Text = "Modificar"
         Me.btnEditar.UseVisualStyleBackColor = True
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(12, 379)
+        Me.btnEliminar.ForeColor = System.Drawing.Color.Black
+        Me.btnEliminar.Location = New System.Drawing.Point(255, 403)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.Size = New System.Drawing.Size(112, 32)
         Me.btnEliminar.TabIndex = 8
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(12, 321)
+        Me.btnAgregar.ForeColor = System.Drawing.Color.Black
+        Me.btnAgregar.Location = New System.Drawing.Point(15, 403)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.Size = New System.Drawing.Size(112, 32)
         Me.btnAgregar.TabIndex = 7
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
@@ -84,33 +90,55 @@ Partial Class frmClientes
         Me.pnlDatos.Controls.Add(Me.txtTelefono)
         Me.pnlDatos.Controls.Add(Me.txtRazonSocial)
         Me.pnlDatos.Enabled = False
-        Me.pnlDatos.Location = New System.Drawing.Point(138, 12)
+        Me.pnlDatos.Location = New System.Drawing.Point(375, 13)
+        Me.pnlDatos.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlDatos.Name = "pnlDatos"
-        Me.pnlDatos.Size = New System.Drawing.Size(323, 303)
+        Me.pnlDatos.Size = New System.Drawing.Size(470, 383)
         Me.pnlDatos.TabIndex = 6
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(72, 140)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(75, 18)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Direccion:"
+        '
+        'txtDireccion
+        '
+        Me.txtDireccion.Location = New System.Drawing.Point(168, 136)
+        Me.txtDireccion.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(289, 24)
+        Me.txtDireccion.TabIndex = 12
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(22, 132)
+        Me.Label4.Location = New System.Drawing.Point(33, 183)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 13)
+        Me.Label4.Size = New System.Drawing.Size(112, 18)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Observaciones:"
         '
         'txtObservaciones
         '
-        Me.txtObservaciones.Location = New System.Drawing.Point(109, 129)
+        Me.txtObservaciones.Location = New System.Drawing.Point(164, 179)
+        Me.txtObservaciones.Margin = New System.Windows.Forms.Padding(4)
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
-        Me.txtObservaciones.Size = New System.Drawing.Size(194, 109)
+        Me.txtObservaciones.Size = New System.Drawing.Size(289, 149)
         Me.txtObservaciones.TabIndex = 10
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(232, 244)
+        Me.btnCancelar.Location = New System.Drawing.Point(348, 338)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.Size = New System.Drawing.Size(112, 32)
         Me.btnCancelar.TabIndex = 9
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
@@ -118,9 +146,10 @@ Partial Class frmClientes
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(151, 244)
+        Me.btnAceptar.Location = New System.Drawing.Point(226, 338)
+        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAceptar.Size = New System.Drawing.Size(112, 32)
         Me.btnAceptar.TabIndex = 8
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
@@ -129,85 +158,81 @@ Partial Class frmClientes
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(74, 79)
+        Me.Label2.Location = New System.Drawing.Point(111, 109)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(29, 13)
+        Me.Label2.Size = New System.Drawing.Size(39, 18)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Mail:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(48, 49)
+        Me.Label3.Location = New System.Drawing.Point(72, 68)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(52, 13)
+        Me.Label3.Size = New System.Drawing.Size(70, 18)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Telefono:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(29, 19)
+        Me.Label1.Location = New System.Drawing.Point(44, 26)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 13)
+        Me.Label1.Size = New System.Drawing.Size(99, 18)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Razon social:"
         '
         'txtMail
         '
-        Me.txtMail.Location = New System.Drawing.Point(112, 72)
+        Me.txtMail.Location = New System.Drawing.Point(168, 100)
+        Me.txtMail.Margin = New System.Windows.Forms.Padding(4)
         Me.txtMail.Name = "txtMail"
-        Me.txtMail.Size = New System.Drawing.Size(194, 20)
+        Me.txtMail.Size = New System.Drawing.Size(289, 24)
         Me.txtMail.TabIndex = 2
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(112, 46)
+        Me.txtTelefono.Location = New System.Drawing.Point(168, 64)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(194, 20)
+        Me.txtTelefono.Size = New System.Drawing.Size(289, 24)
         Me.txtTelefono.TabIndex = 1
         '
         'txtRazonSocial
         '
-        Me.txtRazonSocial.Location = New System.Drawing.Point(112, 16)
+        Me.txtRazonSocial.Location = New System.Drawing.Point(168, 22)
+        Me.txtRazonSocial.Margin = New System.Windows.Forms.Padding(4)
         Me.txtRazonSocial.Name = "txtRazonSocial"
-        Me.txtRazonSocial.Size = New System.Drawing.Size(194, 20)
+        Me.txtRazonSocial.Size = New System.Drawing.Size(289, 24)
         Me.txtRazonSocial.TabIndex = 0
         '
         'lstClientes
         '
         Me.lstClientes.FormattingEnabled = True
-        Me.lstClientes.Location = New System.Drawing.Point(12, 12)
+        Me.lstClientes.ItemHeight = 18
+        Me.lstClientes.Location = New System.Drawing.Point(15, 13)
+        Me.lstClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.lstClientes.Name = "lstClientes"
-        Me.lstClientes.Size = New System.Drawing.Size(120, 303)
+        Me.lstClientes.Size = New System.Drawing.Size(352, 382)
         Me.lstClientes.TabIndex = 5
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(48, 101)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 13)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "Direccion:"
-        '
-        'txtDireccion
-        '
-        Me.txtDireccion.Location = New System.Drawing.Point(112, 98)
-        Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(194, 20)
-        Me.txtDireccion.TabIndex = 12
         '
         'frmClientes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(478, 418)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(857, 445)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.pnlDatos)
         Me.Controls.Add(Me.lstClientes)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.ForeColor = System.Drawing.Color.White
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmClientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmClientes"

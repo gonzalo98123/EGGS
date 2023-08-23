@@ -16,7 +16,8 @@
             Next
         Else
             MsgBox("No se han registrado datos", MsgBoxStyle.Information, "Informacion")
-            Me.Close()
+            lblCantidadVivas.Text = ""
+            lblUltimaCarga.Text = ""
         End If
 
     End Sub

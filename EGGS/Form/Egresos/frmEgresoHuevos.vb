@@ -2,6 +2,7 @@
     Dim dtHue As DataTable
     Dim dtVen As DataTable
     Dim dtCli As DataTable
+    Dim dtMovHue As DataTable
     Dim dtTc As DataTable
     Dim dtTcaja As DataTable
     Dim hue As clsHuevo
@@ -11,6 +12,7 @@
     Dim tipocomprobante As clsTipoComprobante
     Dim tempcaja As clsTempCaja
 
+
     Dim cantidadHuevos As Integer
     Dim fecha As Date
     Dim idVendedor As Integer
@@ -19,10 +21,14 @@
     Dim pagado As Boolean
     Dim observaciones As String
     Dim cajaAbierta As Boolean
+    Public esModificacion As Boolean
+    Public idModificacion As Integer
 
 
 
     Private Sub frmEgresoHuevos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
 
         cliente = New clsCliente
         vendedor = New clsVendedor
@@ -39,7 +45,7 @@
 
         'el procedimiento en la base esta programado para que devuelva un solo regirstro, no debe haber problemas con el for each
         For Each row As DataRow In dtHue.Rows
-            lblCantidad.Text = CStr(row("CantidadStock")) + " Huevos"
+            lblCantidad.Text = CStr(row("CantidadStock"))
         Next
 
         'lleno los cbo
@@ -52,82 +58,182 @@
         cboCliente.ValueMember = "IdCliente"
         cboCliente.DisplayMember = "RazonSocial"
 
+
+        If esModificacion = True Then
+            hue = New clsHuevo
+            dtMovHue = New DataTable
+            hue.idMovimientoHuevos = idModificacion
+            dtMovHue = hue.devuelveNoPagoPorId
+
+            For Each row As DataRow In dtMovHue.Rows
+                dtFechaCarga.Value = CDate(row("FechaMovimiento"))
+                txtCantidadHuevos.Text = CStr(row("Cantidad"))
+                cboCliente.SelectedIndex = CInt(row("IdVendedor"))
+                cboVendedor.SelectedIndex = CInt(row("IdCliente"))
+                txtTotal.Text = CStr(row("PrecioVenta"))
+            Next
+
+        End If
+
     End Sub
 
     Private Sub btnEgreso_Click(sender As Object, e As EventArgs) Handles btnEgreso.Click
+        If esModificacion = True Then
 
-        If chkPagado.Checked = True Then
-            'ESTA PARTE VA PARA EL EGRESO 
-            hue = New clsHuevo
-            fecha = dtFechaCarga.Value
-            cantidadHuevos = CInt(txtCantidadHuevos.Text)
-            idVendedor = cboVendedor.SelectedValue
-            idCliente = cboCliente.SelectedValue
-            total = CDec(txtTotal.Text)
-
-            observaciones = txtObservaciones.Text
-
-            hue.fechaCarga = fecha
-            hue.cantidadHuevos = cantidadHuevos
-            hue.idcliente = idCliente
-            hue.idvendedor = idVendedor
-            hue.total = total
-            hue.pagado = True
-            hue.observaciones = observaciones
-
-            hue.egresoHuevos()
-            'ESTA PARTE VA PARA GENERAR EL COMPROBANTE
-            comprobante = New clsComprobanteAvicola
-            If chkFactura.Checked = True Then
-                comprobante.total = CDbl(txtTotal.Text)
-                comprobante.comprobante = txtComprobante1.Text & "-" & txtComprobante2.Text
-                comprobante.observaciones = txtObservaciones.Text
-                comprobante.fechaComprobante = dtFechaCarga.Value
-                comprobante.esEgreso = 0
-                comprobante.idTipoComprobante = cboTipoComprobante.SelectedValue
-                comprobante.ingresarComprobante()
-
-            Else
-                comprobante.total = CDbl(txtTotal.Text)
-                comprobante.comprobante = "xxxx-xxxxxxxx"
-                comprobante.observaciones = txtObservaciones.Text
-                comprobante.fechaComprobante = dtFechaCarga.Value
-                comprobante.esEgreso = 0
-                comprobante.idTipoComprobante = 4
-                comprobante.ingresarComprobante()
+            If CInt(lblCantidad.Text) < CInt(txtCantidadHuevos.Text) Then
+                MsgBox("No se puede realizar el egreso si la cantidad ingresadade huevos es mayor a la del stock actual.", MsgBoxStyle.Critical, "Egreso")
+                Exit Sub
             End If
 
+            If chkPagado.Checked = True Then
+                'ESTA PARTE VA PARA EL EGRESO 
+                hue = New clsHuevo
+                fecha = dtFechaCarga.Value
+                cantidadHuevos = CInt(txtCantidadHuevos.Text)
+                idVendedor = cboVendedor.SelectedValue
+                idCliente = cboCliente.SelectedValue
+                total = CDec(txtTotal.Text)
 
-            MsgBox("Egreso cargado correctamente", MsgBoxStyle.Information, "Egreso")
+                observaciones = txtObservaciones.Text
 
+                hue.fechaCarga = fecha
+                hue.cantidadHuevos = cantidadHuevos
+                hue.idcliente = idCliente
+                hue.idvendedor = idVendedor
+                hue.total = total
+                hue.pagado = True
+                hue.observaciones = observaciones
+
+                hue.egresoHuevos()
+                'ESTA PARTE VA PARA GENERAR EL COMPROBANTE
+                comprobante = New clsComprobanteAvicola
+                If chkFactura.Checked = True Then
+                    comprobante.total = CDbl(txtTotal.Text)
+                    comprobante.comprobante = txtComprobante1.Text & "-" & txtComprobante2.Text
+                    comprobante.observaciones = txtObservaciones.Text
+                    comprobante.fechaComprobante = dtFechaCarga.Value
+                    comprobante.esEgreso = 0
+                    comprobante.idTipoComprobante = cboTipoComprobante.SelectedValue
+                    comprobante.ingresarComprobante()
+
+                Else
+                    comprobante.total = CDbl(txtTotal.Text)
+                    comprobante.comprobante = "xxxx-xxxxxxxx"
+                    comprobante.observaciones = txtObservaciones.Text
+                    comprobante.fechaComprobante = dtFechaCarga.Value
+                    comprobante.esEgreso = 0
+                    comprobante.idTipoComprobante = 4
+                    comprobante.ingresarComprobante()
+                End If
+
+
+                MsgBox("Egreso cargado correctamente", MsgBoxStyle.Information, "Egreso")
+
+
+            Else
+                hue = New clsHuevo
+
+                fecha = dtFechaCarga.Value
+                cantidadHuevos = CInt(txtCantidadHuevos.Text)
+                idVendedor = cboVendedor.SelectedValue
+                idCliente = cboCliente.SelectedValue
+                total = CDec(txtTotal.Text)
+
+                observaciones = txtObservaciones.Text
+
+                hue.fechaCarga = fecha
+                hue.cantidadHuevos = cantidadHuevos
+                hue.idcliente = idCliente
+                hue.idvendedor = idVendedor
+                hue.total = total
+                hue.pagado = False
+                hue.observaciones = observaciones
+
+                hue.egresoHuevos()
+
+                MsgBox("Egreso cargado correctamente", MsgBoxStyle.Information, "Egreso")
+            End If
+
+            Me.Close()
 
         Else
-            hue = New clsHuevo
+            If CInt(lblCantidad.Text) < CInt(txtCantidadHuevos.Text) Then
+                MsgBox("No se puede realizar el egreso si la cantidad ingresadade huevos es mayor a la del stock actual.", MsgBoxStyle.Critical, "Egreso")
+                Exit Sub
+            End If
 
-            fecha = dtFechaCarga.Value
-            cantidadHuevos = CInt(txtCantidadHuevos.Text)
-            idVendedor = cboVendedor.SelectedValue
-            idCliente = cboCliente.SelectedValue
-            total = CDec(txtTotal.Text)
+            If chkPagado.Checked = True Then
+                'ESTA PARTE VA PARA EL EGRESO 
+                hue = New clsHuevo
+                fecha = dtFechaCarga.Value
+                cantidadHuevos = CInt(txtCantidadHuevos.Text)
+                idVendedor = cboVendedor.SelectedValue
+                idCliente = cboCliente.SelectedValue
+                total = CDec(txtTotal.Text)
 
-            observaciones = txtObservaciones.Text
+                observaciones = txtObservaciones.Text
 
-            hue.fechaCarga = fecha
-            hue.cantidadHuevos = cantidadHuevos
-            hue.idcliente = idCliente
-            hue.idvendedor = idVendedor
-            hue.total = total
-            hue.pagado = False
-            hue.observaciones = observaciones
+                hue.fechaCarga = fecha
+                hue.cantidadHuevos = cantidadHuevos
+                hue.idcliente = idCliente
+                hue.idvendedor = idVendedor
+                hue.total = total
+                hue.pagado = True
+                hue.observaciones = observaciones
 
-            hue.egresoHuevos()
+                hue.egresoHuevos()
+                'ESTA PARTE VA PARA GENERAR EL COMPROBANTE
+                comprobante = New clsComprobanteAvicola
+                If chkFactura.Checked = True Then
+                    comprobante.total = CDbl(txtTotal.Text)
+                    comprobante.comprobante = txtComprobante1.Text & "-" & txtComprobante2.Text
+                    comprobante.observaciones = txtObservaciones.Text
+                    comprobante.fechaComprobante = dtFechaCarga.Value
+                    comprobante.esEgreso = 0
+                    comprobante.idTipoComprobante = cboTipoComprobante.SelectedValue
+                    comprobante.ingresarComprobante()
 
-            MsgBox("Egreso cargado correctamente", MsgBoxStyle.Information, "Egreso")
+                Else
+                    comprobante.total = CDbl(txtTotal.Text)
+                    comprobante.comprobante = "xxxx-xxxxxxxx"
+                    comprobante.observaciones = txtObservaciones.Text
+                    comprobante.fechaComprobante = dtFechaCarga.Value
+                    comprobante.esEgreso = 0
+                    comprobante.idTipoComprobante = 4
+                    comprobante.ingresarComprobante()
+                End If
+
+
+                MsgBox("Egreso cargado correctamente", MsgBoxStyle.Information, "Egreso")
+
+
+            Else
+                hue = New clsHuevo
+
+                fecha = dtFechaCarga.Value
+                cantidadHuevos = CInt(txtCantidadHuevos.Text)
+                idVendedor = cboVendedor.SelectedValue
+                idCliente = cboCliente.SelectedValue
+                total = CDec(txtTotal.Text)
+
+                observaciones = txtObservaciones.Text
+
+                hue.fechaCarga = fecha
+                hue.cantidadHuevos = cantidadHuevos
+                hue.idcliente = idCliente
+                hue.idvendedor = idVendedor
+                hue.total = total
+                hue.pagado = False
+                hue.observaciones = observaciones
+
+                hue.egresoHuevos()
+
+                MsgBox("Egreso cargado correctamente", MsgBoxStyle.Information, "Egreso")
+            End If
+
+            Me.Close()
+
         End If
-
-        Me.Close()
-
-
 
 
     End Sub

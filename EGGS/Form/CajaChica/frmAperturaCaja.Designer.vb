@@ -29,31 +29,35 @@ Partial Class frmAperturaCaja
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtMonto = New System.Windows.Forms.TextBox()
         Me.btnAbrirCaja = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 27)
+        Me.Label1.Location = New System.Drawing.Point(16, 92)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 13)
+        Me.Label1.Size = New System.Drawing.Size(79, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Usuario:"
         '
         'cboUsers
         '
         Me.cboUsers.FormattingEnabled = True
-        Me.cboUsers.Location = New System.Drawing.Point(61, 24)
+        Me.cboUsers.Location = New System.Drawing.Point(108, 88)
+        Me.cboUsers.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.cboUsers.Name = "cboUsers"
-        Me.cboUsers.Size = New System.Drawing.Size(207, 21)
+        Me.cboUsers.Size = New System.Drawing.Size(360, 32)
         Me.cboUsers.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 95)
+        Me.Label2.Location = New System.Drawing.Point(29, 205)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 13)
+        Me.Label2.Size = New System.Drawing.Size(69, 24)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Fecha:"
         '
@@ -61,42 +65,61 @@ Partial Class frmAperturaCaja
         '
         Me.lblFecha.AutoSize = True
         Me.lblFecha.ForeColor = System.Drawing.Color.Red
-        Me.lblFecha.Location = New System.Drawing.Point(58, 95)
+        Me.lblFecha.Location = New System.Drawing.Point(104, 205)
+        Me.lblFecha.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.lblFecha.Name = "lblFecha"
-        Me.lblFecha.Size = New System.Drawing.Size(39, 13)
+        Me.lblFecha.Size = New System.Drawing.Size(66, 24)
         Me.lblFecha.TabIndex = 3
         Me.lblFecha.Text = "Label3"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 59)
+        Me.Label3.Location = New System.Drawing.Point(16, 140)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 26)
+        Me.Label3.Size = New System.Drawing.Size(95, 48)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Monto de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "apertura:"
         '
         'txtMonto
         '
-        Me.txtMonto.Location = New System.Drawing.Point(61, 59)
+        Me.txtMonto.Location = New System.Drawing.Point(108, 156)
+        Me.txtMonto.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.txtMonto.Name = "txtMonto"
-        Me.txtMonto.Size = New System.Drawing.Size(84, 20)
+        Me.txtMonto.Size = New System.Drawing.Size(151, 29)
         Me.txtMonto.TabIndex = 5
         '
         'btnAbrirCaja
         '
-        Me.btnAbrirCaja.Location = New System.Drawing.Point(193, 122)
+        Me.btnAbrirCaja.ForeColor = System.Drawing.Color.Black
+        Me.btnAbrirCaja.Location = New System.Drawing.Point(331, 187)
+        Me.btnAbrirCaja.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.btnAbrirCaja.Name = "btnAbrirCaja"
-        Me.btnAbrirCaja.Size = New System.Drawing.Size(75, 23)
+        Me.btnAbrirCaja.Size = New System.Drawing.Size(137, 43)
         Me.btnAbrirCaja.TabIndex = 6
         Me.btnAbrirCaja.Text = "Abrir caja"
         Me.btnAbrirCaja.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(100, 12)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(301, 31)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "APERTURA DE CAJA"
+        '
         'frmAperturaCaja
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(281, 166)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(510, 279)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btnAbrirCaja)
         Me.Controls.Add(Me.txtMonto)
         Me.Controls.Add(Me.Label3)
@@ -104,6 +127,9 @@ Partial Class frmAperturaCaja
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cboUsers)
         Me.Controls.Add(Me.Label1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Name = "frmAperturaCaja"
         Me.Text = "AperturaCaja"
         Me.ResumeLayout(False)
@@ -118,4 +144,5 @@ Partial Class frmAperturaCaja
     Friend WithEvents Label3 As Label
     Friend WithEvents txtMonto As TextBox
     Friend WithEvents btnAbrirCaja As Button
+    Friend WithEvents Label4 As Label
 End Class

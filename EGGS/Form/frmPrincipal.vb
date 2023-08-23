@@ -57,4 +57,8 @@ Public Class frmPrincipal
     Private Sub PagosPendientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PagosPendientesToolStripMenuItem.Click
         frmPendientesPagos.Show()
     End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
+    End Sub
 End Class

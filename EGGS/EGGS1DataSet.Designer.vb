@@ -25,7 +25,7 @@ Option Explicit On
 Partial Public Class EGGS1DataSet
     Inherits Global.System.Data.DataSet
     
-    Private tablevw_ComprobantesCaja As vw_ComprobantesCajaDataTable
+    Private tablevw_MovimientosPendientesPagos As vw_MovimientosPendientesPagosDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class EGGS1DataSet
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("vw_ComprobantesCaja")) Is Nothing) Then
-                MyBase.Tables.Add(New vw_ComprobantesCajaDataTable(ds.Tables("vw_ComprobantesCaja")))
+            If (Not (ds.Tables("vw_MovimientosPendientesPagos")) Is Nothing) Then
+                MyBase.Tables.Add(New vw_MovimientosPendientesPagosDataTable(ds.Tables("vw_MovimientosPendientesPagos")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class EGGS1DataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property vw_ComprobantesCaja() As vw_ComprobantesCajaDataTable
+    Public ReadOnly Property vw_MovimientosPendientesPagos() As vw_MovimientosPendientesPagosDataTable
         Get
-            Return Me.tablevw_ComprobantesCaja
+            Return Me.tablevw_MovimientosPendientesPagos
         End Get
     End Property
     
@@ -153,8 +153,8 @@ Partial Public Class EGGS1DataSet
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("vw_ComprobantesCaja")) Is Nothing) Then
-                MyBase.Tables.Add(New vw_ComprobantesCajaDataTable(ds.Tables("vw_ComprobantesCaja")))
+            If (Not (ds.Tables("vw_MovimientosPendientesPagos")) Is Nothing) Then
+                MyBase.Tables.Add(New vw_MovimientosPendientesPagosDataTable(ds.Tables("vw_MovimientosPendientesPagos")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class EGGS1DataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tablevw_ComprobantesCaja = CType(MyBase.Tables("vw_ComprobantesCaja"),vw_ComprobantesCajaDataTable)
+        Me.tablevw_MovimientosPendientesPagos = CType(MyBase.Tables("vw_MovimientosPendientesPagos"),vw_MovimientosPendientesPagosDataTable)
         If (initTable = true) Then
-            If (Not (Me.tablevw_ComprobantesCaja) Is Nothing) Then
-                Me.tablevw_ComprobantesCaja.InitVars
+            If (Not (Me.tablevw_MovimientosPendientesPagos) Is Nothing) Then
+                Me.tablevw_MovimientosPendientesPagos.InitVars
             End If
         End If
     End Sub
@@ -204,13 +204,13 @@ Partial Public Class EGGS1DataSet
         Me.Namespace = "http://tempuri.org/EGGS1DataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tablevw_ComprobantesCaja = New vw_ComprobantesCajaDataTable()
-        MyBase.Tables.Add(Me.tablevw_ComprobantesCaja)
+        Me.tablevw_MovimientosPendientesPagos = New vw_MovimientosPendientesPagosDataTable()
+        MyBase.Tables.Add(Me.tablevw_MovimientosPendientesPagos)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Private Function ShouldSerializevw_ComprobantesCaja() As Boolean
+    Private Function ShouldSerializevw_MovimientosPendientesPagos() As Boolean
         Return false
     End Function
     
@@ -273,33 +273,39 @@ Partial Public Class EGGS1DataSet
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Delegate Sub vw_ComprobantesCajaRowChangeEventHandler(ByVal sender As Object, ByVal e As vw_ComprobantesCajaRowChangeEvent)
+    Public Delegate Sub vw_MovimientosPendientesPagosRowChangeEventHandler(ByVal sender As Object, ByVal e As vw_MovimientosPendientesPagosRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class vw_ComprobantesCajaDataTable
-        Inherits Global.System.Data.TypedTableBase(Of vw_ComprobantesCajaRow)
+    Partial Public Class vw_MovimientosPendientesPagosDataTable
+        Inherits Global.System.Data.TypedTableBase(Of vw_MovimientosPendientesPagosRow)
         
-        Private columnFechaComprobante As Global.System.Data.DataColumn
+        Private columnIdMovimientoHuevos As Global.System.Data.DataColumn
         
-        Private columnTipoComprobante As Global.System.Data.DataColumn
+        Private columnFechaMovimiento As Global.System.Data.DataColumn
         
-        Private columnComprobante As Global.System.Data.DataColumn
+        Private columnCantidad As Global.System.Data.DataColumn
         
-        Private columnTotal As Global.System.Data.DataColumn
+        Private columnEsEgreso As Global.System.Data.DataColumn
         
-        Private columnUsuario As Global.System.Data.DataColumn
+        Private columnIdVendedor As Global.System.Data.DataColumn
         
-        Private columntipo As Global.System.Data.DataColumn
+        Private columnIdCliente As Global.System.Data.DataColumn
+        
+        Private columnPagado As Global.System.Data.DataColumn
+        
+        Private columnObservacion As Global.System.Data.DataColumn
+        
+        Private columnPrecioVenta As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "vw_ComprobantesCaja"
+            Me.TableName = "vw_MovimientosPendientesPagos"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -332,49 +338,73 @@ Partial Public Class EGGS1DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property FechaComprobanteColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property IdMovimientoHuevosColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnFechaComprobante
+                Return Me.columnIdMovimientoHuevos
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property TipoComprobanteColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property FechaMovimientoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnTipoComprobante
+                Return Me.columnFechaMovimiento
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property ComprobanteColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property CantidadColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnComprobante
+                Return Me.columnCantidad
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property TotalColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property EsEgresoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnTotal
+                Return Me.columnEsEgreso
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property UsuarioColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property IdVendedorColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnUsuario
+                Return Me.columnIdVendedor
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property tipoColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property IdClienteColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columntipo
+                Return Me.columnIdCliente
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PagadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPagado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ObservacionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnObservacion
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PrecioVentaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPrecioVenta
             End Get
         End Property
         
@@ -389,44 +419,50 @@ Partial Public Class EGGS1DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As vw_ComprobantesCajaRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As vw_MovimientosPendientesPagosRow
             Get
-                Return CType(Me.Rows(index),vw_ComprobantesCajaRow)
+                Return CType(Me.Rows(index),vw_MovimientosPendientesPagosRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event vw_ComprobantesCajaRowChanging As vw_ComprobantesCajaRowChangeEventHandler
+        Public Event vw_MovimientosPendientesPagosRowChanging As vw_MovimientosPendientesPagosRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event vw_ComprobantesCajaRowChanged As vw_ComprobantesCajaRowChangeEventHandler
+        Public Event vw_MovimientosPendientesPagosRowChanged As vw_MovimientosPendientesPagosRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event vw_ComprobantesCajaRowDeleting As vw_ComprobantesCajaRowChangeEventHandler
+        Public Event vw_MovimientosPendientesPagosRowDeleting As vw_MovimientosPendientesPagosRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event vw_ComprobantesCajaRowDeleted As vw_ComprobantesCajaRowChangeEventHandler
+        Public Event vw_MovimientosPendientesPagosRowDeleted As vw_MovimientosPendientesPagosRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Sub Addvw_ComprobantesCajaRow(ByVal row As vw_ComprobantesCajaRow)
+        Public Overloads Sub Addvw_MovimientosPendientesPagosRow(ByVal row As vw_MovimientosPendientesPagosRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addvw_ComprobantesCajaRow(ByVal FechaComprobante As Date, ByVal TipoComprobante As String, ByVal Comprobante As String, ByVal Total As Decimal, ByVal Usuario As String, ByVal tipo As String) As vw_ComprobantesCajaRow
-            Dim rowvw_ComprobantesCajaRow As vw_ComprobantesCajaRow = CType(Me.NewRow,vw_ComprobantesCajaRow)
-            Dim columnValuesArray() As Object = New Object() {FechaComprobante, TipoComprobante, Comprobante, Total, Usuario, tipo}
-            rowvw_ComprobantesCajaRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowvw_ComprobantesCajaRow)
-            Return rowvw_ComprobantesCajaRow
+        Public Overloads Function Addvw_MovimientosPendientesPagosRow(ByVal FechaMovimiento As Date, ByVal Cantidad As Integer, ByVal EsEgreso As Boolean, ByVal IdVendedor As Integer, ByVal IdCliente As Integer, ByVal Pagado As Boolean, ByVal Observacion As String, ByVal PrecioVenta As Decimal) As vw_MovimientosPendientesPagosRow
+            Dim rowvw_MovimientosPendientesPagosRow As vw_MovimientosPendientesPagosRow = CType(Me.NewRow,vw_MovimientosPendientesPagosRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, FechaMovimiento, Cantidad, EsEgreso, IdVendedor, IdCliente, Pagado, Observacion, PrecioVenta}
+            rowvw_MovimientosPendientesPagosRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowvw_MovimientosPendientesPagosRow)
+            Return rowvw_MovimientosPendientesPagosRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindByIdMovimientoHuevos(ByVal IdMovimientoHuevos As Integer) As vw_MovimientosPendientesPagosRow
+            Return CType(Me.Rows.Find(New Object() {IdMovimientoHuevos}),vw_MovimientosPendientesPagosRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As vw_ComprobantesCajaDataTable = CType(MyBase.Clone,vw_ComprobantesCajaDataTable)
+            Dim cln As vw_MovimientosPendientesPagosDataTable = CType(MyBase.Clone,vw_MovimientosPendientesPagosDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -434,66 +470,78 @@ Partial Public Class EGGS1DataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New vw_ComprobantesCajaDataTable()
+            Return New vw_MovimientosPendientesPagosDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnFechaComprobante = MyBase.Columns("FechaComprobante")
-            Me.columnTipoComprobante = MyBase.Columns("TipoComprobante")
-            Me.columnComprobante = MyBase.Columns("Comprobante")
-            Me.columnTotal = MyBase.Columns("Total")
-            Me.columnUsuario = MyBase.Columns("Usuario")
-            Me.columntipo = MyBase.Columns("tipo")
+            Me.columnIdMovimientoHuevos = MyBase.Columns("IdMovimientoHuevos")
+            Me.columnFechaMovimiento = MyBase.Columns("FechaMovimiento")
+            Me.columnCantidad = MyBase.Columns("Cantidad")
+            Me.columnEsEgreso = MyBase.Columns("EsEgreso")
+            Me.columnIdVendedor = MyBase.Columns("IdVendedor")
+            Me.columnIdCliente = MyBase.Columns("IdCliente")
+            Me.columnPagado = MyBase.Columns("Pagado")
+            Me.columnObservacion = MyBase.Columns("Observacion")
+            Me.columnPrecioVenta = MyBase.Columns("PrecioVenta")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnFechaComprobante = New Global.System.Data.DataColumn("FechaComprobante", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnFechaComprobante)
-            Me.columnTipoComprobante = New Global.System.Data.DataColumn("TipoComprobante", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTipoComprobante)
-            Me.columnComprobante = New Global.System.Data.DataColumn("Comprobante", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnComprobante)
-            Me.columnTotal = New Global.System.Data.DataColumn("Total", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTotal)
-            Me.columnUsuario = New Global.System.Data.DataColumn("Usuario", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUsuario)
-            Me.columntipo = New Global.System.Data.DataColumn("tipo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columntipo)
-            Me.columnTipoComprobante.MaxLength = 20
-            Me.columnComprobante.MaxLength = 50
-            Me.columnUsuario.MaxLength = 30
-            Me.columntipo.ReadOnly = true
-            Me.columntipo.MaxLength = 7
+            Me.columnIdMovimientoHuevos = New Global.System.Data.DataColumn("IdMovimientoHuevos", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIdMovimientoHuevos)
+            Me.columnFechaMovimiento = New Global.System.Data.DataColumn("FechaMovimiento", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFechaMovimiento)
+            Me.columnCantidad = New Global.System.Data.DataColumn("Cantidad", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCantidad)
+            Me.columnEsEgreso = New Global.System.Data.DataColumn("EsEgreso", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEsEgreso)
+            Me.columnIdVendedor = New Global.System.Data.DataColumn("IdVendedor", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIdVendedor)
+            Me.columnIdCliente = New Global.System.Data.DataColumn("IdCliente", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIdCliente)
+            Me.columnPagado = New Global.System.Data.DataColumn("Pagado", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPagado)
+            Me.columnObservacion = New Global.System.Data.DataColumn("Observacion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnObservacion)
+            Me.columnPrecioVenta = New Global.System.Data.DataColumn("PrecioVenta", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPrecioVenta)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdMovimientoHuevos}, true))
+            Me.columnIdMovimientoHuevos.AutoIncrement = true
+            Me.columnIdMovimientoHuevos.AutoIncrementSeed = -1
+            Me.columnIdMovimientoHuevos.AutoIncrementStep = -1
+            Me.columnIdMovimientoHuevos.AllowDBNull = false
+            Me.columnIdMovimientoHuevos.ReadOnly = true
+            Me.columnIdMovimientoHuevos.Unique = true
+            Me.columnObservacion.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Newvw_ComprobantesCajaRow() As vw_ComprobantesCajaRow
-            Return CType(Me.NewRow,vw_ComprobantesCajaRow)
+        Public Function Newvw_MovimientosPendientesPagosRow() As vw_MovimientosPendientesPagosRow
+            Return CType(Me.NewRow,vw_MovimientosPendientesPagosRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New vw_ComprobantesCajaRow(builder)
+            Return New vw_MovimientosPendientesPagosRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(vw_ComprobantesCajaRow)
+            Return GetType(vw_MovimientosPendientesPagosRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.vw_ComprobantesCajaRowChangedEvent) Is Nothing) Then
-                RaiseEvent vw_ComprobantesCajaRowChanged(Me, New vw_ComprobantesCajaRowChangeEvent(CType(e.Row,vw_ComprobantesCajaRow), e.Action))
+            If (Not (Me.vw_MovimientosPendientesPagosRowChangedEvent) Is Nothing) Then
+                RaiseEvent vw_MovimientosPendientesPagosRowChanged(Me, New vw_MovimientosPendientesPagosRowChangeEvent(CType(e.Row,vw_MovimientosPendientesPagosRow), e.Action))
             End If
         End Sub
         
@@ -501,8 +549,8 @@ Partial Public Class EGGS1DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.vw_ComprobantesCajaRowChangingEvent) Is Nothing) Then
-                RaiseEvent vw_ComprobantesCajaRowChanging(Me, New vw_ComprobantesCajaRowChangeEvent(CType(e.Row,vw_ComprobantesCajaRow), e.Action))
+            If (Not (Me.vw_MovimientosPendientesPagosRowChangingEvent) Is Nothing) Then
+                RaiseEvent vw_MovimientosPendientesPagosRowChanging(Me, New vw_MovimientosPendientesPagosRowChangeEvent(CType(e.Row,vw_MovimientosPendientesPagosRow), e.Action))
             End If
         End Sub
         
@@ -510,8 +558,8 @@ Partial Public Class EGGS1DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.vw_ComprobantesCajaRowDeletedEvent) Is Nothing) Then
-                RaiseEvent vw_ComprobantesCajaRowDeleted(Me, New vw_ComprobantesCajaRowChangeEvent(CType(e.Row,vw_ComprobantesCajaRow), e.Action))
+            If (Not (Me.vw_MovimientosPendientesPagosRowDeletedEvent) Is Nothing) Then
+                RaiseEvent vw_MovimientosPendientesPagosRowDeleted(Me, New vw_MovimientosPendientesPagosRowChangeEvent(CType(e.Row,vw_MovimientosPendientesPagosRow), e.Action))
             End If
         End Sub
         
@@ -519,14 +567,14 @@ Partial Public Class EGGS1DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.vw_ComprobantesCajaRowDeletingEvent) Is Nothing) Then
-                RaiseEvent vw_ComprobantesCajaRowDeleting(Me, New vw_ComprobantesCajaRowChangeEvent(CType(e.Row,vw_ComprobantesCajaRow), e.Action))
+            If (Not (Me.vw_MovimientosPendientesPagosRowDeletingEvent) Is Nothing) Then
+                RaiseEvent vw_MovimientosPendientesPagosRowDeleting(Me, New vw_MovimientosPendientesPagosRowChangeEvent(CType(e.Row,vw_MovimientosPendientesPagosRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Removevw_ComprobantesCajaRow(ByVal row As vw_ComprobantesCajaRow)
+        Public Sub Removevw_MovimientosPendientesPagosRow(ByVal row As vw_MovimientosPendientesPagosRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -553,7 +601,7 @@ Partial Public Class EGGS1DataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "vw_ComprobantesCajaDataTable"
+            attribute2.FixedValue = "vw_MovimientosPendientesPagosDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -600,179 +648,251 @@ Partial Public Class EGGS1DataSet
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class vw_ComprobantesCajaRow
+    Partial Public Class vw_MovimientosPendientesPagosRow
         Inherits Global.System.Data.DataRow
         
-        Private tablevw_ComprobantesCaja As vw_ComprobantesCajaDataTable
+        Private tablevw_MovimientosPendientesPagos As vw_MovimientosPendientesPagosDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tablevw_ComprobantesCaja = CType(Me.Table,vw_ComprobantesCajaDataTable)
+            Me.tablevw_MovimientosPendientesPagos = CType(Me.Table,vw_MovimientosPendientesPagosDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property FechaComprobante() As Date
+        Public Property IdMovimientoHuevos() As Integer
+            Get
+                Return CType(Me(Me.tablevw_MovimientosPendientesPagos.IdMovimientoHuevosColumn),Integer)
+            End Get
+            Set
+                Me(Me.tablevw_MovimientosPendientesPagos.IdMovimientoHuevosColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property FechaMovimiento() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tablevw_ComprobantesCaja.FechaComprobanteColumn),Date)
+                    Return CType(Me(Me.tablevw_MovimientosPendientesPagos.FechaMovimientoColumn),Date)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'FechaComprobante' in table 'vw_ComprobantesCaja' is DBNull."& _ 
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'FechaMovimiento' in table 'vw_MovimientosPendientesPagos' i"& _ 
+                            "s DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_MovimientosPendientesPagos.FechaMovimientoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Cantidad() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_MovimientosPendientesPagos.CantidadColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Cantidad' in table 'vw_MovimientosPendientesPagos' is DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_MovimientosPendientesPagos.CantidadColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property EsEgreso() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_MovimientosPendientesPagos.EsEgresoColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'EsEgreso' in table 'vw_MovimientosPendientesPagos' is DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_MovimientosPendientesPagos.EsEgresoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property IdVendedor() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_MovimientosPendientesPagos.IdVendedorColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'IdVendedor' in table 'vw_MovimientosPendientesPagos' is DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_MovimientosPendientesPagos.IdVendedorColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property IdCliente() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_MovimientosPendientesPagos.IdClienteColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'IdCliente' in table 'vw_MovimientosPendientesPagos' is DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_MovimientosPendientesPagos.IdClienteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Pagado() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_MovimientosPendientesPagos.PagadoColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Pagado' in table 'vw_MovimientosPendientesPagos' is DBNull."& _ 
                             "", e)
                 End Try
             End Get
             Set
-                Me(Me.tablevw_ComprobantesCaja.FechaComprobanteColumn) = value
+                Me(Me.tablevw_MovimientosPendientesPagos.PagadoColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property TipoComprobante() As String
+        Public Property Observacion() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablevw_ComprobantesCaja.TipoComprobanteColumn),String)
+                    Return CType(Me(Me.tablevw_MovimientosPendientesPagos.ObservacionColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'TipoComprobante' in table 'vw_ComprobantesCaja' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Observacion' in table 'vw_MovimientosPendientesPagos' is DB"& _ 
+                            "Null.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablevw_ComprobantesCaja.TipoComprobanteColumn) = value
+                Me(Me.tablevw_MovimientosPendientesPagos.ObservacionColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Comprobante() As String
+        Public Property PrecioVenta() As Decimal
             Get
                 Try 
-                    Return CType(Me(Me.tablevw_ComprobantesCaja.ComprobanteColumn),String)
+                    Return CType(Me(Me.tablevw_MovimientosPendientesPagos.PrecioVentaColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Comprobante' in table 'vw_ComprobantesCaja' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PrecioVenta' in table 'vw_MovimientosPendientesPagos' is DB"& _ 
+                            "Null.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablevw_ComprobantesCaja.ComprobanteColumn) = value
+                Me(Me.tablevw_MovimientosPendientesPagos.PrecioVentaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Total() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_ComprobantesCaja.TotalColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Total' in table 'vw_ComprobantesCaja' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_ComprobantesCaja.TotalColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Usuario() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_ComprobantesCaja.UsuarioColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Usuario' in table 'vw_ComprobantesCaja' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_ComprobantesCaja.UsuarioColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property tipo() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_ComprobantesCaja.tipoColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'tipo' in table 'vw_ComprobantesCaja' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_ComprobantesCaja.tipoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsFechaComprobanteNull() As Boolean
-            Return Me.IsNull(Me.tablevw_ComprobantesCaja.FechaComprobanteColumn)
+        Public Function IsFechaMovimientoNull() As Boolean
+            Return Me.IsNull(Me.tablevw_MovimientosPendientesPagos.FechaMovimientoColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetFechaComprobanteNull()
-            Me(Me.tablevw_ComprobantesCaja.FechaComprobanteColumn) = Global.System.Convert.DBNull
+        Public Sub SetFechaMovimientoNull()
+            Me(Me.tablevw_MovimientosPendientesPagos.FechaMovimientoColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsTipoComprobanteNull() As Boolean
-            Return Me.IsNull(Me.tablevw_ComprobantesCaja.TipoComprobanteColumn)
+        Public Function IsCantidadNull() As Boolean
+            Return Me.IsNull(Me.tablevw_MovimientosPendientesPagos.CantidadColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetTipoComprobanteNull()
-            Me(Me.tablevw_ComprobantesCaja.TipoComprobanteColumn) = Global.System.Convert.DBNull
+        Public Sub SetCantidadNull()
+            Me(Me.tablevw_MovimientosPendientesPagos.CantidadColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsComprobanteNull() As Boolean
-            Return Me.IsNull(Me.tablevw_ComprobantesCaja.ComprobanteColumn)
+        Public Function IsEsEgresoNull() As Boolean
+            Return Me.IsNull(Me.tablevw_MovimientosPendientesPagos.EsEgresoColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetComprobanteNull()
-            Me(Me.tablevw_ComprobantesCaja.ComprobanteColumn) = Global.System.Convert.DBNull
+        Public Sub SetEsEgresoNull()
+            Me(Me.tablevw_MovimientosPendientesPagos.EsEgresoColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsTotalNull() As Boolean
-            Return Me.IsNull(Me.tablevw_ComprobantesCaja.TotalColumn)
+        Public Function IsIdVendedorNull() As Boolean
+            Return Me.IsNull(Me.tablevw_MovimientosPendientesPagos.IdVendedorColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetTotalNull()
-            Me(Me.tablevw_ComprobantesCaja.TotalColumn) = Global.System.Convert.DBNull
+        Public Sub SetIdVendedorNull()
+            Me(Me.tablevw_MovimientosPendientesPagos.IdVendedorColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsUsuarioNull() As Boolean
-            Return Me.IsNull(Me.tablevw_ComprobantesCaja.UsuarioColumn)
+        Public Function IsIdClienteNull() As Boolean
+            Return Me.IsNull(Me.tablevw_MovimientosPendientesPagos.IdClienteColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetUsuarioNull()
-            Me(Me.tablevw_ComprobantesCaja.UsuarioColumn) = Global.System.Convert.DBNull
+        Public Sub SetIdClienteNull()
+            Me(Me.tablevw_MovimientosPendientesPagos.IdClienteColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IstipoNull() As Boolean
-            Return Me.IsNull(Me.tablevw_ComprobantesCaja.tipoColumn)
+        Public Function IsPagadoNull() As Boolean
+            Return Me.IsNull(Me.tablevw_MovimientosPendientesPagos.PagadoColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SettipoNull()
-            Me(Me.tablevw_ComprobantesCaja.tipoColumn) = Global.System.Convert.DBNull
+        Public Sub SetPagadoNull()
+            Me(Me.tablevw_MovimientosPendientesPagos.PagadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsObservacionNull() As Boolean
+            Return Me.IsNull(Me.tablevw_MovimientosPendientesPagos.ObservacionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetObservacionNull()
+            Me(Me.tablevw_MovimientosPendientesPagos.ObservacionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPrecioVentaNull() As Boolean
+            Return Me.IsNull(Me.tablevw_MovimientosPendientesPagos.PrecioVentaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPrecioVentaNull()
+            Me(Me.tablevw_MovimientosPendientesPagos.PrecioVentaColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -780,16 +900,16 @@ Partial Public Class EGGS1DataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Class vw_ComprobantesCajaRowChangeEvent
+    Public Class vw_MovimientosPendientesPagosRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As vw_ComprobantesCajaRow
+        Private eventRow As vw_MovimientosPendientesPagosRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New(ByVal row As vw_ComprobantesCajaRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As vw_MovimientosPendientesPagosRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -797,7 +917,7 @@ Partial Public Class EGGS1DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Row() As vw_ComprobantesCajaRow
+        Public ReadOnly Property Row() As vw_MovimientosPendientesPagosRow
             Get
                 Return Me.eventRow
             End Get
@@ -824,7 +944,7 @@ Namespace EGGS1DataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class vw_ComprobantesCajaTableAdapter
+    Partial Public Class vw_MovimientosPendientesPagosTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
@@ -941,13 +1061,16 @@ Namespace EGGS1DataSetTableAdapters
             Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "vw_ComprobantesCaja"
-            tableMapping.ColumnMappings.Add("FechaComprobante", "FechaComprobante")
-            tableMapping.ColumnMappings.Add("TipoComprobante", "TipoComprobante")
-            tableMapping.ColumnMappings.Add("Comprobante", "Comprobante")
-            tableMapping.ColumnMappings.Add("Total", "Total")
-            tableMapping.ColumnMappings.Add("Usuario", "Usuario")
-            tableMapping.ColumnMappings.Add("tipo", "tipo")
+            tableMapping.DataSetTable = "vw_MovimientosPendientesPagos"
+            tableMapping.ColumnMappings.Add("IdMovimientoHuevos", "IdMovimientoHuevos")
+            tableMapping.ColumnMappings.Add("FechaMovimiento", "FechaMovimiento")
+            tableMapping.ColumnMappings.Add("Cantidad", "Cantidad")
+            tableMapping.ColumnMappings.Add("EsEgreso", "EsEgreso")
+            tableMapping.ColumnMappings.Add("IdVendedor", "IdVendedor")
+            tableMapping.ColumnMappings.Add("IdCliente", "IdCliente")
+            tableMapping.ColumnMappings.Add("Pagado", "Pagado")
+            tableMapping.ColumnMappings.Add("Observacion", "Observacion")
+            tableMapping.ColumnMappings.Add("PrecioVenta", "PrecioVenta")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -964,8 +1087,8 @@ Namespace EGGS1DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT FechaComprobante, TipoComprobante, Comprobante, Total, Usuario, tipo FROM "& _ 
-                "vw_ComprobantesCaja"
+            Me._commandCollection(0).CommandText = "SELECT IdMovimientoHuevos, FechaMovimiento, Cantidad, EsEgreso, IdVendedor, IdCli"& _ 
+                "ente, Pagado, Observacion, PrecioVenta FROM dbo.vw_MovimientosPendientesPagos"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -973,7 +1096,7 @@ Namespace EGGS1DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As EGGS1DataSet.vw_ComprobantesCajaDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As EGGS1DataSet.vw_MovimientosPendientesPagosDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -986,9 +1109,9 @@ Namespace EGGS1DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As EGGS1DataSet.vw_ComprobantesCajaDataTable
+        Public Overloads Overridable Function GetData() As EGGS1DataSet.vw_MovimientosPendientesPagosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As EGGS1DataSet.vw_ComprobantesCajaDataTable = New EGGS1DataSet.vw_ComprobantesCajaDataTable()
+            Dim dataTable As EGGS1DataSet.vw_MovimientosPendientesPagosDataTable = New EGGS1DataSet.vw_MovimientosPendientesPagosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function

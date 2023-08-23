@@ -25,29 +25,33 @@ Partial Class frmConsultaComprobantesCaja
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.EGGSDataSet = New EGGS.EGGSDataSet()
-        Me.EGGSDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VwComprobantesCajaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EGGS1DataSet = New EGGS.EGGS1DataSet()
-        Me.Vw_ComprobantesCajaTableAdapter = New EGGS.EGGS1DataSetTableAdapters.vw_ComprobantesCajaTableAdapter()
+        Me.EGGSDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EGGS1DataSetComprobantes = New EGGS.EGGS1DataSetComprobantes()
+        Me.VwComprobantesCajaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Vw_ComprobantesCajaTableAdapter = New EGGS.EGGS1DataSetComprobantesTableAdapters.vw_ComprobantesCajaTableAdapter()
+        Me.FechaComprobanteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TipoComprobanteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ComprobanteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaComprobanteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TipoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EGGSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EGGSDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VwComprobantesCajaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EGGS1DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EGGSDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EGGS1DataSetComprobantes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VwComprobantesCajaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(169, 25)
+        Me.Label1.Location = New System.Drawing.Point(65, 19)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(367, 31)
         Me.Label1.TabIndex = 0
@@ -57,22 +61,20 @@ Partial Class frmConsultaComprobantesCaja
         '
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TipoComprobanteDataGridViewTextBoxColumn, Me.ComprobanteDataGridViewTextBoxColumn, Me.TotalDataGridViewTextBoxColumn, Me.UsuarioDataGridViewTextBoxColumn, Me.FechaComprobanteDataGridViewTextBoxColumn, Me.tipo})
-        Me.DataGridView1.DataSource = Me.VwComprobantesCajaBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 102)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tipo, Me.FechaComprobanteDataGridViewTextBoxColumn, Me.TipoComprobanteDataGridViewTextBoxColumn, Me.ComprobanteDataGridViewTextBoxColumn, Me.TotalDataGridViewTextBoxColumn, Me.UsuarioDataGridViewTextBoxColumn, Me.TipoDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.VwComprobantesCajaBindingSource1
+        Me.DataGridView1.Location = New System.Drawing.Point(71, 92)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(734, 345)
+        Me.DataGridView1.Size = New System.Drawing.Size(902, 478)
         Me.DataGridView1.TabIndex = 1
         '
-        'EGGSDataSet
+        'tipo
         '
-        Me.EGGSDataSet.DataSetName = "EGGSDataSet"
-        Me.EGGSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EGGSDataSetBindingSource
-        '
-        Me.EGGSDataSetBindingSource.DataSource = Me.EGGSDataSet
-        Me.EGGSDataSetBindingSource.Position = 0
+        Me.tipo.DataPropertyName = "tipo"
+        Me.tipo.HeaderText = "tipo"
+        Me.tipo.Name = "tipo"
+        Me.tipo.ReadOnly = True
         '
         'VwComprobantesCajaBindingSource
         '
@@ -84,9 +86,25 @@ Partial Class frmConsultaComprobantesCaja
         Me.EGGS1DataSet.DataSetName = "EGGS1DataSet"
         Me.EGGS1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'EGGS1DataSetComprobantes
+        '
+        Me.EGGS1DataSetComprobantes.DataSetName = "EGGS1DataSetComprobantes"
+        Me.EGGS1DataSetComprobantes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'VwComprobantesCajaBindingSource1
+        '
+        Me.VwComprobantesCajaBindingSource1.DataMember = "vw_ComprobantesCaja"
+        Me.VwComprobantesCajaBindingSource1.DataSource = Me.EGGS1DataSetComprobantes
+        '
         'Vw_ComprobantesCajaTableAdapter
         '
         Me.Vw_ComprobantesCajaTableAdapter.ClearBeforeFill = True
+        '
+        'FechaComprobanteDataGridViewTextBoxColumn
+        '
+        Me.FechaComprobanteDataGridViewTextBoxColumn.DataPropertyName = "FechaComprobante"
+        Me.FechaComprobanteDataGridViewTextBoxColumn.HeaderText = "FechaComprobante"
+        Me.FechaComprobanteDataGridViewTextBoxColumn.Name = "FechaComprobanteDataGridViewTextBoxColumn"
         '
         'TipoComprobanteDataGridViewTextBoxColumn
         '
@@ -112,33 +130,31 @@ Partial Class frmConsultaComprobantesCaja
         Me.UsuarioDataGridViewTextBoxColumn.HeaderText = "Usuario"
         Me.UsuarioDataGridViewTextBoxColumn.Name = "UsuarioDataGridViewTextBoxColumn"
         '
-        'FechaComprobanteDataGridViewTextBoxColumn
+        'TipoDataGridViewTextBoxColumn
         '
-        Me.FechaComprobanteDataGridViewTextBoxColumn.DataPropertyName = "FechaComprobante"
-        Me.FechaComprobanteDataGridViewTextBoxColumn.HeaderText = "FechaComprobante"
-        Me.FechaComprobanteDataGridViewTextBoxColumn.Name = "FechaComprobanteDataGridViewTextBoxColumn"
-        '
-        'tipo
-        '
-        Me.tipo.DataPropertyName = "tipo"
-        Me.tipo.HeaderText = "tipo"
-        Me.tipo.Name = "tipo"
-        Me.tipo.ReadOnly = True
+        Me.TipoDataGridViewTextBoxColumn.DataPropertyName = "tipo"
+        Me.TipoDataGridViewTextBoxColumn.HeaderText = "tipo"
+        Me.TipoDataGridViewTextBoxColumn.Name = "TipoDataGridViewTextBoxColumn"
+        Me.TipoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'frmConsultaComprobantesCaja
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(777, 459)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1026, 775)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmConsultaComprobantesCaja"
         Me.Text = "frmConsultaComprobantesCaja"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EGGSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EGGSDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VwComprobantesCajaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EGGS1DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EGGSDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EGGS1DataSetComprobantes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VwComprobantesCajaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -147,14 +163,16 @@ Partial Class frmConsultaComprobantesCaja
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents EGGSDataSetBindingSource As BindingSource
-    Friend WithEvents EGGSDataSet As EGGSDataSet
     Friend WithEvents EGGS1DataSet As EGGS1DataSet
     Friend WithEvents VwComprobantesCajaBindingSource As BindingSource
-    Friend WithEvents Vw_ComprobantesCajaTableAdapter As EGGS1DataSetTableAdapters.vw_ComprobantesCajaTableAdapter
+    Friend WithEvents tipo As DataGridViewTextBoxColumn
+    Friend WithEvents EGGS1DataSetComprobantes As EGGS1DataSetComprobantes
+    Friend WithEvents VwComprobantesCajaBindingSource1 As BindingSource
+    Friend WithEvents Vw_ComprobantesCajaTableAdapter As EGGS1DataSetComprobantesTableAdapters.vw_ComprobantesCajaTableAdapter
+    Friend WithEvents FechaComprobanteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TipoComprobanteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ComprobanteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TotalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UsuarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaComprobanteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents tipo As DataGridViewTextBoxColumn
+    Friend WithEvents TipoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

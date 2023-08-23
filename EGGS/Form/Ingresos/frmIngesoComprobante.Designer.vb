@@ -57,67 +57,76 @@ Partial Class frmIngesoComprobante
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.dtFechaComprobante)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Location = New System.Drawing.Point(14, 14)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(359, 333)
+        Me.Panel1.Size = New System.Drawing.Size(658, 615)
         Me.Panel1.TabIndex = 0
         '
         'txtMontoTotal
         '
-        Me.txtMontoTotal.Location = New System.Drawing.Point(81, 158)
+        Me.txtMontoTotal.Location = New System.Drawing.Point(149, 292)
+        Me.txtMontoTotal.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.txtMontoTotal.Name = "txtMontoTotal"
-        Me.txtMontoTotal.Size = New System.Drawing.Size(90, 20)
+        Me.txtMontoTotal.Size = New System.Drawing.Size(162, 29)
         Me.txtMontoTotal.TabIndex = 12
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(12, 161)
+        Me.Label7.Location = New System.Drawing.Point(22, 297)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(63, 13)
+        Me.Label7.Size = New System.Drawing.Size(106, 24)
         Me.Label7.TabIndex = 11
         Me.Label7.Text = "Monto total:"
         '
         'cboTiposGastos
         '
         Me.cboTiposGastos.FormattingEnabled = True
-        Me.cboTiposGastos.Location = New System.Drawing.Point(177, 29)
+        Me.cboTiposGastos.Location = New System.Drawing.Point(325, 53)
+        Me.cboTiposGastos.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.cboTiposGastos.Name = "cboTiposGastos"
-        Me.cboTiposGastos.Size = New System.Drawing.Size(167, 21)
+        Me.cboTiposGastos.Size = New System.Drawing.Size(302, 32)
         Me.cboTiposGastos.TabIndex = 10
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(174, 13)
+        Me.Label6.Location = New System.Drawing.Point(319, 24)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(75, 13)
+        Me.Label6.Size = New System.Drawing.Size(130, 24)
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "Tipo de gasto:"
         '
         'btnCargarComprobante
         '
-        Me.btnCargarComprobante.Location = New System.Drawing.Point(213, 301)
+        Me.btnCargarComprobante.ForeColor = System.Drawing.Color.Black
+        Me.btnCargarComprobante.Location = New System.Drawing.Point(391, 556)
+        Me.btnCargarComprobante.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.btnCargarComprobante.Name = "btnCargarComprobante"
-        Me.btnCargarComprobante.Size = New System.Drawing.Size(131, 23)
+        Me.btnCargarComprobante.Size = New System.Drawing.Size(240, 43)
         Me.btnCargarComprobante.TabIndex = 8
         Me.btnCargarComprobante.Text = "Cargar comprobante"
         Me.btnCargarComprobante.UseVisualStyleBackColor = True
         '
         'txtObservaciones
         '
-        Me.txtObservaciones.Location = New System.Drawing.Point(15, 209)
+        Me.txtObservaciones.Location = New System.Drawing.Point(27, 385)
+        Me.txtObservaciones.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
-        Me.txtObservaciones.Size = New System.Drawing.Size(329, 86)
+        Me.txtObservaciones.Size = New System.Drawing.Size(600, 156)
         Me.txtObservaciones.TabIndex = 7
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 193)
+        Me.Label5.Location = New System.Drawing.Point(22, 356)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(78, 13)
+        Me.Label5.Size = New System.Drawing.Size(137, 24)
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Observaciones"
         '
@@ -127,82 +136,95 @@ Partial Class frmIngesoComprobante
         Me.Panel2.Controls.Add(Me.txtComprobante2)
         Me.Panel2.Controls.Add(Me.txtComprobante1)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(100, 80)
+        Me.Panel2.Location = New System.Drawing.Point(183, 148)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(244, 52)
+        Me.Panel2.Size = New System.Drawing.Size(447, 96)
         Me.Panel2.TabIndex = 5
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(61, 29)
+        Me.Label4.Location = New System.Drawing.Point(112, 53)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(10, 13)
+        Me.Label4.Size = New System.Drawing.Size(16, 24)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "-"
         '
         'txtComprobante2
         '
-        Me.txtComprobante2.Location = New System.Drawing.Point(72, 26)
+        Me.txtComprobante2.Location = New System.Drawing.Point(132, 48)
+        Me.txtComprobante2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.txtComprobante2.Name = "txtComprobante2"
-        Me.txtComprobante2.Size = New System.Drawing.Size(157, 20)
+        Me.txtComprobante2.Size = New System.Drawing.Size(285, 29)
         Me.txtComprobante2.TabIndex = 6
         '
         'txtComprobante1
         '
-        Me.txtComprobante1.Location = New System.Drawing.Point(6, 26)
+        Me.txtComprobante1.Location = New System.Drawing.Point(11, 48)
+        Me.txtComprobante1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.txtComprobante1.Name = "txtComprobante1"
-        Me.txtComprobante1.Size = New System.Drawing.Size(49, 20)
+        Me.txtComprobante1.Size = New System.Drawing.Size(87, 29)
         Me.txtComprobante1.TabIndex = 5
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 0)
+        Me.Label3.Location = New System.Drawing.Point(7, -5)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 13)
+        Me.Label3.Size = New System.Drawing.Size(161, 24)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Nro Comprobante"
         '
         'cboTipoComprobante
         '
         Me.cboTipoComprobante.FormattingEnabled = True
-        Me.cboTipoComprobante.Location = New System.Drawing.Point(15, 106)
+        Me.cboTipoComprobante.Location = New System.Drawing.Point(27, 196)
+        Me.cboTipoComprobante.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.cboTipoComprobante.Name = "cboTipoComprobante"
-        Me.cboTipoComprobante.Size = New System.Drawing.Size(79, 21)
+        Me.cboTipoComprobante.Size = New System.Drawing.Size(141, 32)
         Me.cboTipoComprobante.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 77)
+        Me.Label2.Location = New System.Drawing.Point(22, 143)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 26)
+        Me.Label2.Size = New System.Drawing.Size(127, 48)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Tipo de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "comprobante:"
         '
         'dtFechaComprobante
         '
-        Me.dtFechaComprobante.Location = New System.Drawing.Point(15, 30)
+        Me.dtFechaComprobante.Location = New System.Drawing.Point(27, 56)
+        Me.dtFechaComprobante.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.dtFechaComprobante.Name = "dtFechaComprobante"
-        Me.dtFechaComprobante.Size = New System.Drawing.Size(140, 20)
+        Me.dtFechaComprobante.Size = New System.Drawing.Size(253, 29)
         Me.dtFechaComprobante.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 14)
+        Me.Label1.Location = New System.Drawing.Point(22, 25)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(92, 13)
+        Me.Label1.Size = New System.Drawing.Size(164, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Fecha de ingreso:"
         '
         'frmIngesoComprobante
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(397, 381)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(684, 651)
         Me.Controls.Add(Me.Panel1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Name = "frmIngesoComprobante"
         Me.Text = "frmIngesoComprobante"
         Me.Panel1.ResumeLayout(False)

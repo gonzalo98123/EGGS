@@ -35,6 +35,12 @@ Public Class frmIngesoComprobante
 
 
     End Sub
+    Private Sub limpiarCampos()
+        txtComprobante1.Text = ""
+        txtComprobante2.Text = ""
+        txtMontoTotal.Text = ""
+        txtObservaciones.Text = ""
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCargarComprobante.Click
         clsCa = New clsComprobanteAvicola
@@ -49,6 +55,7 @@ Public Class frmIngesoComprobante
 
         clsCa.ingresarComprobante()
         MsgBox("Comprobante cargado correctamente", MsgBoxStyle.Information, "Ingreso de comprobante")
+        limpiarCampos()
 
     End Sub
 End Class

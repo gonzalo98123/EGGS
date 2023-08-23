@@ -31,7 +31,7 @@ Public Class frmSesion
 
                         If txtUser.Text = CStr(row("Usuario")) Then
                             If txtPass.Text = CStr(row("Contraseña")) Then
-                                frmPrincipal.Show()
+                                frmPrincipalDef.Show()
                                 Me.Close()
                                 Exit Sub
                             Else
@@ -55,19 +55,41 @@ Public Class frmSesion
     End Sub
 
     Private Sub frmSesion_Load(sender As Object, e As EventArgs) Handles Me.Load
-
-
         'En el evento load del form verificamos si esta funcionando la conexion con la base.
+
+
+        CustomizeComponents()
+
         If verifyConnection() = True Then
-            lblResult.Text = "Conectado"
+            lblResult.Text = "Online"
             lblResult.ForeColor = Color.Green
         Else
             MsgBox("No se pudo establecer la conexion.", MessageBoxButtons.OK, "Error")
             Me.Close()
         End If
 
-
-
     End Sub
 
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub CustomizeComponents()
+        txtUser.AutoSize = False
+        txtUser.Size = New Size(350, 35)
+        txtPass.AutoSize = False
+        txtPass.Size = New Size(350, 35)
+    End Sub
+
+    Private Sub btnIniciarSesion_Paint(sender As Object, e As PaintEventArgs) Handles btnIniciarSesion.Paint
+        Dim buttonPath As Drawing2D.GraphicsPath = New Drawing2D.GraphicsPath
+        Dim myRectangle As Rectangle = btnIniciarSesion.ClientRectangle
+        myRectangle.Inflate(0, 30)
+        buttonPath.AddEllipse(myRectangle)
+        btnIniciarSesion.Region = New Region(buttonPath)
+    End Sub
 End Class

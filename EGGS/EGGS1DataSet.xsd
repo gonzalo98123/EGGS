@@ -7,24 +7,27 @@
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="EGGSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EGGSConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.EGGS.My.MySettings.GlobalReference.Default.EGGSConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_ComprobantesCajaTableAdapter" GeneratorDataComponentClassName="vw_ComprobantesCajaTableAdapter" Name="vw_ComprobantesCaja" UserDataComponentName="vw_ComprobantesCajaTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_MovimientosPendientesPagosTableAdapter" GeneratorDataComponentClassName="vw_MovimientosPendientesPagosTableAdapter" Name="vw_MovimientosPendientesPagos" UserDataComponentName="vw_MovimientosPendientesPagosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="EGGSConnectionString (MySettings)" DbObjectName="EGGS1.dbo.vw_ComprobantesCaja" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="EGGSConnectionString (MySettings)" DbObjectName="EGGS1.dbo.vw_MovimientosPendientesPagos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT FechaComprobante, TipoComprobante, Comprobante, Total, Usuario, tipo FROM vw_ComprobantesCaja</CommandText>
+                    <CommandText>SELECT IdMovimientoHuevos, FechaMovimiento, Cantidad, EsEgreso, IdVendedor, IdCliente, Pagado, Observacion, PrecioVenta FROM dbo.vw_MovimientosPendientesPagos</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="FechaComprobante" DataSetColumn="FechaComprobante" />
-              <Mapping SourceColumn="TipoComprobante" DataSetColumn="TipoComprobante" />
-              <Mapping SourceColumn="Comprobante" DataSetColumn="Comprobante" />
-              <Mapping SourceColumn="Total" DataSetColumn="Total" />
-              <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
-              <Mapping SourceColumn="tipo" DataSetColumn="tipo" />
+              <Mapping SourceColumn="IdMovimientoHuevos" DataSetColumn="IdMovimientoHuevos" />
+              <Mapping SourceColumn="FechaMovimiento" DataSetColumn="FechaMovimiento" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+              <Mapping SourceColumn="EsEgreso" DataSetColumn="EsEgreso" />
+              <Mapping SourceColumn="IdVendedor" DataSetColumn="IdVendedor" />
+              <Mapping SourceColumn="IdCliente" DataSetColumn="IdCliente" />
+              <Mapping SourceColumn="Pagado" DataSetColumn="Pagado" />
+              <Mapping SourceColumn="Observacion" DataSetColumn="Observacion" />
+              <Mapping SourceColumn="PrecioVenta" DataSetColumn="PrecioVenta" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -36,43 +39,32 @@
   <xs:element name="EGGS1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="EGGS1DataSet" msprop:Generator_UserDSName="EGGS1DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="vw_ComprobantesCaja" msprop:Generator_TableClassName="vw_ComprobantesCajaDataTable" msprop:Generator_TableVarName="tablevw_ComprobantesCaja" msprop:Generator_RowChangedName="vw_ComprobantesCajaRowChanged" msprop:Generator_TablePropName="vw_ComprobantesCaja" msprop:Generator_RowDeletingName="vw_ComprobantesCajaRowDeleting" msprop:Generator_RowChangingName="vw_ComprobantesCajaRowChanging" msprop:Generator_RowEvHandlerName="vw_ComprobantesCajaRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_ComprobantesCajaRowDeleted" msprop:Generator_RowClassName="vw_ComprobantesCajaRow" msprop:Generator_UserTableName="vw_ComprobantesCaja" msprop:Generator_RowEvArgName="vw_ComprobantesCajaRowChangeEvent">
+        <xs:element name="vw_MovimientosPendientesPagos" msprop:Generator_TableClassName="vw_MovimientosPendientesPagosDataTable" msprop:Generator_TableVarName="tablevw_MovimientosPendientesPagos" msprop:Generator_TablePropName="vw_MovimientosPendientesPagos" msprop:Generator_RowDeletingName="vw_MovimientosPendientesPagosRowDeleting" msprop:Generator_RowChangingName="vw_MovimientosPendientesPagosRowChanging" msprop:Generator_RowEvHandlerName="vw_MovimientosPendientesPagosRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_MovimientosPendientesPagosRowDeleted" msprop:Generator_UserTableName="vw_MovimientosPendientesPagos" msprop:Generator_RowChangedName="vw_MovimientosPendientesPagosRowChanged" msprop:Generator_RowEvArgName="vw_MovimientosPendientesPagosRowChangeEvent" msprop:Generator_RowClassName="vw_MovimientosPendientesPagosRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="FechaComprobante" msprop:Generator_ColumnVarNameInTable="columnFechaComprobante" msprop:Generator_ColumnPropNameInRow="FechaComprobante" msprop:Generator_ColumnPropNameInTable="FechaComprobanteColumn" msprop:Generator_UserColumnName="FechaComprobante" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="TipoComprobante" msprop:Generator_ColumnVarNameInTable="columnTipoComprobante" msprop:Generator_ColumnPropNameInRow="TipoComprobante" msprop:Generator_ColumnPropNameInTable="TipoComprobanteColumn" msprop:Generator_UserColumnName="TipoComprobante" minOccurs="0">
+              <xs:element name="IdMovimientoHuevos" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdMovimientoHuevos" msprop:Generator_ColumnPropNameInRow="IdMovimientoHuevos" msprop:Generator_ColumnPropNameInTable="IdMovimientoHuevosColumn" msprop:Generator_UserColumnName="IdMovimientoHuevos" type="xs:int" />
+              <xs:element name="FechaMovimiento" msprop:Generator_ColumnVarNameInTable="columnFechaMovimiento" msprop:Generator_ColumnPropNameInRow="FechaMovimiento" msprop:Generator_ColumnPropNameInTable="FechaMovimientoColumn" msprop:Generator_UserColumnName="FechaMovimiento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="EsEgreso" msprop:Generator_ColumnVarNameInTable="columnEsEgreso" msprop:Generator_ColumnPropNameInRow="EsEgreso" msprop:Generator_ColumnPropNameInTable="EsEgresoColumn" msprop:Generator_UserColumnName="EsEgreso" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IdVendedor" msprop:Generator_ColumnVarNameInTable="columnIdVendedor" msprop:Generator_ColumnPropNameInRow="IdVendedor" msprop:Generator_ColumnPropNameInTable="IdVendedorColumn" msprop:Generator_UserColumnName="IdVendedor" type="xs:int" minOccurs="0" />
+              <xs:element name="IdCliente" msprop:Generator_ColumnVarNameInTable="columnIdCliente" msprop:Generator_ColumnPropNameInRow="IdCliente" msprop:Generator_ColumnPropNameInTable="IdClienteColumn" msprop:Generator_UserColumnName="IdCliente" type="xs:int" minOccurs="0" />
+              <xs:element name="Pagado" msprop:Generator_ColumnVarNameInTable="columnPagado" msprop:Generator_ColumnPropNameInRow="Pagado" msprop:Generator_ColumnPropNameInTable="PagadoColumn" msprop:Generator_UserColumnName="Pagado" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Observacion" msprop:Generator_ColumnVarNameInTable="columnObservacion" msprop:Generator_ColumnPropNameInRow="Observacion" msprop:Generator_ColumnPropNameInTable="ObservacionColumn" msprop:Generator_UserColumnName="Observacion" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Comprobante" msprop:Generator_ColumnVarNameInTable="columnComprobante" msprop:Generator_ColumnPropNameInRow="Comprobante" msprop:Generator_ColumnPropNameInTable="ComprobanteColumn" msprop:Generator_UserColumnName="Comprobante" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="tipo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntipo" msprop:Generator_ColumnPropNameInRow="tipo" msprop:Generator_ColumnPropNameInTable="tipoColumn" msprop:Generator_UserColumnName="tipo" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="7" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="PrecioVenta" msprop:Generator_ColumnVarNameInTable="columnPrecioVenta" msprop:Generator_ColumnPropNameInRow="PrecioVenta" msprop:Generator_ColumnPropNameInTable="PrecioVentaColumn" msprop:Generator_UserColumnName="PrecioVenta" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_MovimientosPendientesPagos" />
+      <xs:field xpath="mstns:IdMovimientoHuevos" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

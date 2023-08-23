@@ -1,4 +1,5 @@
-﻿Public Class clsCaja
+﻿Imports System.Data.SqlClient
+Public Class clsCaja
     Private ID_CAJA As Integer
     Private ID_USUARIO As Integer
     Private ID_COMPROBANTE As Integer
@@ -100,11 +101,24 @@
         End Set
     End Property
 
+    Public Sub cierreCaja()
+        Try
+            connect()
+            'ingresamos el metodo con los parametros correspondientes
+            comm = New SqlCommand("sp_CierreCaja", conn)
+            comm.CommandType = CommandType.StoredProcedure
+            'ejecuta
+            comm.ExecuteNonQuery()
 
-
-
-
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            disconnect()
+        End Try
+    End Sub
 End Class
+
+
 
 
 

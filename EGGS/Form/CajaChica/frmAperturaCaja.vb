@@ -8,7 +8,9 @@
 
         If row("Cantidad") > 0 Then
             MsgBox("Ya se encuentra una caja abierta.", MsgBoxStyle.Critical, "Informacion")
-            Me.Close()
+            btnAbrirCaja.Enabled = False
+            cboUsers.Enabled = False
+            txtMonto.Enabled = False
         End If
 
         Dim clsUser As New clsUser

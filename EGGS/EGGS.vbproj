@@ -87,6 +87,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EGGS1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EGGS1DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EGGS1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EGGS1DataSetComprobantes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EGGS1DataSetComprobantes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EGGSDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -291,6 +301,28 @@
     <None Include="EGGS1DataSet.xss">
       <DependentUpon>EGGS1DataSet.xsd</DependentUpon>
     </None>
+    <None Include="EGGS1DataSet1.xsc">
+      <DependentUpon>EGGS1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EGGS1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EGGS1DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EGGS1DataSet1.xss">
+      <DependentUpon>EGGS1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EGGS1DataSetComprobantes.xsc">
+      <DependentUpon>EGGS1DataSetComprobantes.xsd</DependentUpon>
+    </None>
+    <None Include="EGGS1DataSetComprobantes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EGGS1DataSetComprobantes.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EGGS1DataSetComprobantes.xss">
+      <DependentUpon>EGGS1DataSetComprobantes.xsd</DependentUpon>
+    </None>
     <None Include="EGGSDataSet.xsc">
       <DependentUpon>EGGSDataSet.xsd</DependentUpon>
     </None>
@@ -315,7 +347,18 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="icons\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\pngwing.com.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

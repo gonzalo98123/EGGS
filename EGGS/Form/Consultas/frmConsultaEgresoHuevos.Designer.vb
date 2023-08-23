@@ -24,16 +24,13 @@ Partial Class frmConsultaEgresoHuevos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.dtvConsulta = New System.Windows.Forms.DataGridView()
-        Me.EGGSDataSet = New EGGS.EGGSDataSet()
-        Me.VwEgresoHuevosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Vw_EgresoHuevosTableAdapter = New EGGS.EGGSDataSetTableAdapters.vw_EgresoHuevosTableAdapter()
         Me.FechaIngresoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CantidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RazonSocialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrecioVentaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VwEgresoHuevosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.dtvConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EGGSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VwEgresoHuevosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,25 +42,12 @@ Partial Class frmConsultaEgresoHuevos
         Me.dtvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtvConsulta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FechaIngresoDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.NombreApellidoDataGridViewTextBoxColumn, Me.RazonSocialDataGridViewTextBoxColumn, Me.PrecioVentaDataGridViewTextBoxColumn})
         Me.dtvConsulta.DataSource = Me.VwEgresoHuevosBindingSource
-        Me.dtvConsulta.Location = New System.Drawing.Point(12, 113)
+        Me.dtvConsulta.Location = New System.Drawing.Point(92, 167)
+        Me.dtvConsulta.Margin = New System.Windows.Forms.Padding(4)
         Me.dtvConsulta.Name = "dtvConsulta"
         Me.dtvConsulta.ReadOnly = True
-        Me.dtvConsulta.Size = New System.Drawing.Size(550, 265)
+        Me.dtvConsulta.Size = New System.Drawing.Size(825, 367)
         Me.dtvConsulta.TabIndex = 0
-        '
-        'EGGSDataSet
-        '
-        Me.EGGSDataSet.DataSetName = "EGGSDataSet"
-        Me.EGGSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VwEgresoHuevosBindingSource
-        '
-        Me.VwEgresoHuevosBindingSource.DataMember = "vw_EgresoHuevos"
-        Me.VwEgresoHuevosBindingSource.DataSource = Me.EGGSDataSet
-        '
-        'Vw_EgresoHuevosTableAdapter
-        '
-        Me.Vw_EgresoHuevosTableAdapter.ClearBeforeFill = True
         '
         'FechaIngresoDataGridViewTextBoxColumn
         '
@@ -100,26 +84,37 @@ Partial Class frmConsultaEgresoHuevos
         Me.PrecioVentaDataGridViewTextBoxColumn.Name = "PrecioVentaDataGridViewTextBoxColumn"
         Me.PrecioVentaDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'VwEgresoHuevosBindingSource
+        '
+        Me.VwEgresoHuevosBindingSource.DataMember = "vw_EgresoHuevos"
+        '
+        'EGGSDataSet
+        '
+        '
+        'Vw_EgresoHuevosTableAdapter
+        '
+        '
         'frmConsultaEgresoHuevos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(577, 390)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1026, 775)
         Me.Controls.Add(Me.dtvConsulta)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmConsultaEgresoHuevos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmConsultaEgresoHuevos"
         CType(Me.dtvConsulta, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EGGSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VwEgresoHuevosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents dtvConsulta As DataGridView
-    Friend WithEvents EGGSDataSet As EGGSDataSet
     Friend WithEvents VwEgresoHuevosBindingSource As BindingSource
-    Friend WithEvents Vw_EgresoHuevosTableAdapter As EGGSDataSetTableAdapters.vw_EgresoHuevosTableAdapter
     Friend WithEvents FechaIngresoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CantidadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreApellidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

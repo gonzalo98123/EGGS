@@ -1,5 +1,6 @@
 ﻿Public Class frmCierreDeCaja
     Dim tempcaja As clsTempCaja
+    Dim caja As clsCaja
     Dim dtTempCaja As DataTable
     Dim dt As DataTable
     Private Sub frmCierreDeCaja_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -8,14 +9,12 @@
         dtTempCaja = tempcaja.VerificarCajaAbierta
         dt = tempcaja.DevuelveDatosCierreCaja()
 
-        Dim row As DataRow = dtTempCaja.Rows(dtTempCaja.Rows.Count - 1)
-        Dim rowDt As DataRow = dt.Rows(dtTempCaja.Rows.Count - 1)
-
-        If row("Cantidad") > 0 Then
-            lblFecha.Text = rowDt("FechaApertura")
-            lblMontoCierre.Text = rowDt("TotalDisponible")
-            lblUsuario.Text = rowDt("Usuario")
-
+        If dt.Rows.Count > 0 Then
+            For Each row As DataRow In dt.Rows
+                lblFecha.Text = CDate(row("FechaApertura"))
+                lblMontoCierre.Text = CStr(row("TotalDisponible"))
+                lblUsuario.Text = CStr(row("Usuario"))
+            Next
         Else
             MsgBox("No hay ninguna caja abierta.", MsgBoxStyle.Critical, "Informacion")
             Me.Close()
@@ -24,5 +23,11 @@
 
     Private Sub btnComprobantes_Click(sender As Object, e As EventArgs) Handles btnComprobantes.Click
         frmConsultaComprobantesCaja.Show()
+    End Sub
+
+    Private Sub btnCierreCaja_Click(sender As Object, e As EventArgs) Handles btnCierreCaja.Click
+        caja = New clsCaja
+        caja.cierreCaja()
+        MsgBox("Caja cerrada correctamente")
     End Sub
 End Class
