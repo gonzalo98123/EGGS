@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmPrincipal
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmPrincipal
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -42,15 +42,12 @@ Partial Class frmPrincipal
         Me.AperturaDeCajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IngresoDeComprobantesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CierreDeCajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AsdToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AvicolaToolStripMenuItem, Me.SadToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AvicolaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(11, 4, 0, 4)
@@ -170,22 +167,6 @@ Partial Class frmPrincipal
         Me.CierreDeCajaToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.CierreDeCajaToolStripMenuItem.Text = "Cierre de caja"
         '
-        'SadToolStripMenuItem
-        '
-        Me.SadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AsdToolStripMenuItem})
-        Me.SadToolStripMenuItem.Name = "SadToolStripMenuItem"
-        Me.SadToolStripMenuItem.Size = New System.Drawing.Size(37, 19)
-        Me.SadToolStripMenuItem.Text = "sad"
-        '
-        'AsdToolStripMenuItem
-        '
-        Me.AsdToolStripMenuItem.Name = "AsdToolStripMenuItem"
-        Me.AsdToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
-        Me.AsdToolStripMenuItem.Text = "asd"
-        '
-        'EggsDataSet1
-        '
-        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
@@ -195,6 +176,7 @@ Partial Class frmPrincipal
         Me.ClientSize = New System.Drawing.Size(1744, 1057)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
@@ -228,6 +210,4 @@ Partial Class frmPrincipal
     Friend WithEvents IngresoDeComprobantesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CierreDeCajaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PagosPendientesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SadToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AsdToolStripMenuItem As ToolStripMenuItem
 End Class

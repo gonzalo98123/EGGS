@@ -24,11 +24,6 @@ Partial Class frmConsultaEgresoHuevos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.dtvConsulta = New System.Windows.Forms.DataGridView()
-        Me.FechaIngresoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CantidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RazonSocialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrecioVentaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VwEgresoHuevosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.dtvConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VwEgresoHuevosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,71 +35,33 @@ Partial Class frmConsultaEgresoHuevos
         Me.dtvConsulta.AllowUserToDeleteRows = False
         Me.dtvConsulta.AutoGenerateColumns = False
         Me.dtvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtvConsulta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FechaIngresoDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.NombreApellidoDataGridViewTextBoxColumn, Me.RazonSocialDataGridViewTextBoxColumn, Me.PrecioVentaDataGridViewTextBoxColumn})
         Me.dtvConsulta.DataSource = Me.VwEgresoHuevosBindingSource
-        Me.dtvConsulta.Location = New System.Drawing.Point(92, 167)
+        Me.dtvConsulta.Location = New System.Drawing.Point(85, 13)
         Me.dtvConsulta.Margin = New System.Windows.Forms.Padding(4)
         Me.dtvConsulta.Name = "dtvConsulta"
         Me.dtvConsulta.ReadOnly = True
         Me.dtvConsulta.Size = New System.Drawing.Size(825, 367)
         Me.dtvConsulta.TabIndex = 0
         '
-        'FechaIngresoDataGridViewTextBoxColumn
-        '
-        Me.FechaIngresoDataGridViewTextBoxColumn.DataPropertyName = "FechaIngreso"
-        Me.FechaIngresoDataGridViewTextBoxColumn.HeaderText = "FechaIngreso"
-        Me.FechaIngresoDataGridViewTextBoxColumn.Name = "FechaIngresoDataGridViewTextBoxColumn"
-        Me.FechaIngresoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CantidadDataGridViewTextBoxColumn
-        '
-        Me.CantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad"
-        Me.CantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad"
-        Me.CantidadDataGridViewTextBoxColumn.Name = "CantidadDataGridViewTextBoxColumn"
-        Me.CantidadDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreApellidoDataGridViewTextBoxColumn
-        '
-        Me.NombreApellidoDataGridViewTextBoxColumn.DataPropertyName = "NombreApellido"
-        Me.NombreApellidoDataGridViewTextBoxColumn.HeaderText = "NombreApellido"
-        Me.NombreApellidoDataGridViewTextBoxColumn.Name = "NombreApellidoDataGridViewTextBoxColumn"
-        Me.NombreApellidoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'RazonSocialDataGridViewTextBoxColumn
-        '
-        Me.RazonSocialDataGridViewTextBoxColumn.DataPropertyName = "RazonSocial"
-        Me.RazonSocialDataGridViewTextBoxColumn.HeaderText = "RazonSocial"
-        Me.RazonSocialDataGridViewTextBoxColumn.Name = "RazonSocialDataGridViewTextBoxColumn"
-        Me.RazonSocialDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PrecioVentaDataGridViewTextBoxColumn
-        '
-        Me.PrecioVentaDataGridViewTextBoxColumn.DataPropertyName = "PrecioVenta"
-        Me.PrecioVentaDataGridViewTextBoxColumn.HeaderText = "PrecioVenta"
-        Me.PrecioVentaDataGridViewTextBoxColumn.Name = "PrecioVentaDataGridViewTextBoxColumn"
-        Me.PrecioVentaDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'VwEgresoHuevosBindingSource
         '
         Me.VwEgresoHuevosBindingSource.DataMember = "vw_EgresoHuevos"
-        '
-        'EGGSDataSet
-        '
-        '
-        'Vw_EgresoHuevosTableAdapter
-        '
         '
         'frmConsultaEgresoHuevos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1026, 775)
+        Me.ClientSize = New System.Drawing.Size(999, 431)
         Me.Controls.Add(Me.dtvConsulta)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.ForeColor = System.Drawing.Color.Gainsboro
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmConsultaEgresoHuevos"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmConsultaEgresoHuevos"
         CType(Me.dtvConsulta, System.ComponentModel.ISupportInitialize).EndInit()

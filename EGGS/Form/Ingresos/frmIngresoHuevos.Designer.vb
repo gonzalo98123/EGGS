@@ -44,7 +44,7 @@ Partial Class frmIngresoHuevos
         '
         Me.dtFechaIngreso.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.dtFechaIngreso.Location = New System.Drawing.Point(183, 76)
-        Me.dtFechaIngreso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtFechaIngreso.Margin = New System.Windows.Forms.Padding(4)
         Me.dtFechaIngreso.Name = "dtFechaIngreso"
         Me.dtFechaIngreso.Size = New System.Drawing.Size(296, 24)
         Me.dtFechaIngreso.TabIndex = 1
@@ -63,7 +63,7 @@ Partial Class frmIngresoHuevos
         'txtCantidad
         '
         Me.txtCantidad.Location = New System.Drawing.Point(183, 36)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(296, 24)
         Me.txtCantidad.TabIndex = 3
@@ -72,7 +72,7 @@ Partial Class frmIngresoHuevos
         '
         Me.btnIngresar.ForeColor = System.Drawing.Color.Black
         Me.btnIngresar.Location = New System.Drawing.Point(298, 108)
-        Me.btnIngresar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnIngresar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(181, 35)
         Me.btnIngresar.TabIndex = 4
@@ -92,11 +92,12 @@ Partial Class frmIngresoHuevos
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmIngresoHuevos"
         Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ingreso de Huevos"
         Me.ResumeLayout(False)

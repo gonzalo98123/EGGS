@@ -87,7 +87,7 @@ Partial Class frmCantidadGallinas
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.ForeColor = System.Drawing.Color.Gainsboro
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Margin = New System.Windows.Forms.Padding(5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmCantidadGallinas"

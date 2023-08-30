@@ -4,54 +4,48 @@ Public Class frmSesion
 
     Dim users As clsUser
     Dim dt As DataTable
-    Dim a As Boolean
+
 
     Private Sub btnIniciarSesion_Click(sender As Object, e As EventArgs) Handles btnIniciarSesion.Click
-        a = False
 
-        If a Then
 
-            'Verificamos que los txt no esten vacios.
-            If txtUser.Text = "" Then
-                MsgBox("El campo usuario esta vacio.", MessageBoxButtons.OK, "Alerta")
-                txtUser.Focus()
-            Else
-                If txtPass.Text = "" Then
-                    MsgBox("El campo contraseña esta vacio.", MessageBoxButtons.OK, "Alerta")
-                    txtPass.Focus()
+        'Verificamos que los txt no esten vacios.
+        If txtUser.Text = "" Then
+            MsgBox("El campo usuario esta vacio.", MessageBoxButtons.OK, "Alerta")
+            txtUser.Focus()
+        Else
+            If txtPass.Text = "" Then
+                MsgBox("El campo contraseña esta vacio.", MessageBoxButtons.OK, "Alerta")
+                txtPass.Focus()
 
-                Else 'Una vez que todos los campos esten completos verificamos los datos.
+            Else 'Una vez que todos los campos esten completos verificamos los datos.
 
-                    'Se trae los datos de la tabla Usuarios de la base.
-                    users = New clsUser
-                    dt = New DataTable
-                    dt = users.devuelveUsuarios()
+                'Se trae los datos de la tabla Usuarios de la base.
+                users = New clsUser
+                dt = New DataTable
+                dt = users.devuelveUsuarios()
 
-                    For Each row As DataRow In dt.Rows
+                For Each row As DataRow In dt.Rows
 
-                        If txtUser.Text = CStr(row("Usuario")) Then
-                            If txtPass.Text = CStr(row("Contraseña")) Then
-                                frmPrincipalDef.Show()
-                                Me.Close()
-                                Exit Sub
-                            Else
-                                MsgBox("Contraseña incorrecta", MessageBoxButtons.OK, "Alerta")
-                                Exit Sub
-                            End If
+                    If txtUser.Text = CStr(row("Usuario")) Then
+                        If txtPass.Text = CStr(row("Contraseña")) Then
+                            frmPrincipal.Show()
+                            Me.Close()
+                            Exit Sub
                         Else
-                            MsgBox("Usuario incorrecto", MessageBoxButtons.OK, "Alerta")
+                            MsgBox("Contraseña incorrecta", MessageBoxButtons.OK, "Alerta")
                             Exit Sub
                         End If
+                    Else
+                        MsgBox("Usuario incorrecto", MessageBoxButtons.OK, "Alerta")
+                        Exit Sub
+                    End If
 
-                    Next
+                Next
 
-                End If
             End If
-        Else
-            frmPrincipal.Show()
-            Me.Close()
-            Exit Sub
         End If
+
     End Sub
 
     Private Sub frmSesion_Load(sender As Object, e As EventArgs) Handles Me.Load

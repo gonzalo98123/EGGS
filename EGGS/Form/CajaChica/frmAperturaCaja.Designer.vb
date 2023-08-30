@@ -46,7 +46,7 @@ Partial Class frmAperturaCaja
         '
         Me.cboUsers.FormattingEnabled = True
         Me.cboUsers.Location = New System.Drawing.Point(108, 88)
-        Me.cboUsers.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.cboUsers.Margin = New System.Windows.Forms.Padding(5)
         Me.cboUsers.Name = "cboUsers"
         Me.cboUsers.Size = New System.Drawing.Size(360, 32)
         Me.cboUsers.TabIndex = 1
@@ -85,7 +85,7 @@ Partial Class frmAperturaCaja
         'txtMonto
         '
         Me.txtMonto.Location = New System.Drawing.Point(108, 156)
-        Me.txtMonto.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txtMonto.Margin = New System.Windows.Forms.Padding(5)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(151, 29)
         Me.txtMonto.TabIndex = 5
@@ -94,7 +94,7 @@ Partial Class frmAperturaCaja
         '
         Me.btnAbrirCaja.ForeColor = System.Drawing.Color.Black
         Me.btnAbrirCaja.Location = New System.Drawing.Point(331, 187)
-        Me.btnAbrirCaja.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.btnAbrirCaja.Margin = New System.Windows.Forms.Padding(5)
         Me.btnAbrirCaja.Name = "btnAbrirCaja"
         Me.btnAbrirCaja.Size = New System.Drawing.Size(137, 43)
         Me.btnAbrirCaja.TabIndex = 6
@@ -129,8 +129,12 @@ Partial Class frmAperturaCaja
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Margin = New System.Windows.Forms.Padding(5)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmAperturaCaja"
+        Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AperturaCaja"
         Me.ResumeLayout(False)
         Me.PerformLayout()

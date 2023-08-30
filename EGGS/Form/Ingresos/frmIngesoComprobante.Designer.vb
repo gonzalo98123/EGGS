@@ -58,7 +58,7 @@ Partial Class frmIngesoComprobante
         Me.Panel1.Controls.Add(Me.dtFechaComprobante)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(14, 14)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(658, 615)
         Me.Panel1.TabIndex = 0
@@ -66,7 +66,7 @@ Partial Class frmIngesoComprobante
         'txtMontoTotal
         '
         Me.txtMontoTotal.Location = New System.Drawing.Point(149, 292)
-        Me.txtMontoTotal.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txtMontoTotal.Margin = New System.Windows.Forms.Padding(5)
         Me.txtMontoTotal.Name = "txtMontoTotal"
         Me.txtMontoTotal.Size = New System.Drawing.Size(162, 29)
         Me.txtMontoTotal.TabIndex = 12
@@ -85,7 +85,7 @@ Partial Class frmIngesoComprobante
         '
         Me.cboTiposGastos.FormattingEnabled = True
         Me.cboTiposGastos.Location = New System.Drawing.Point(325, 53)
-        Me.cboTiposGastos.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.cboTiposGastos.Margin = New System.Windows.Forms.Padding(5)
         Me.cboTiposGastos.Name = "cboTiposGastos"
         Me.cboTiposGastos.Size = New System.Drawing.Size(302, 32)
         Me.cboTiposGastos.TabIndex = 10
@@ -104,7 +104,7 @@ Partial Class frmIngesoComprobante
         '
         Me.btnCargarComprobante.ForeColor = System.Drawing.Color.Black
         Me.btnCargarComprobante.Location = New System.Drawing.Point(391, 556)
-        Me.btnCargarComprobante.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.btnCargarComprobante.Margin = New System.Windows.Forms.Padding(5)
         Me.btnCargarComprobante.Name = "btnCargarComprobante"
         Me.btnCargarComprobante.Size = New System.Drawing.Size(240, 43)
         Me.btnCargarComprobante.TabIndex = 8
@@ -114,7 +114,7 @@ Partial Class frmIngesoComprobante
         'txtObservaciones
         '
         Me.txtObservaciones.Location = New System.Drawing.Point(27, 385)
-        Me.txtObservaciones.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txtObservaciones.Margin = New System.Windows.Forms.Padding(5)
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
         Me.txtObservaciones.Size = New System.Drawing.Size(600, 156)
@@ -137,7 +137,7 @@ Partial Class frmIngesoComprobante
         Me.Panel2.Controls.Add(Me.txtComprobante1)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Location = New System.Drawing.Point(183, 148)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(447, 96)
         Me.Panel2.TabIndex = 5
@@ -155,7 +155,7 @@ Partial Class frmIngesoComprobante
         'txtComprobante2
         '
         Me.txtComprobante2.Location = New System.Drawing.Point(132, 48)
-        Me.txtComprobante2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txtComprobante2.Margin = New System.Windows.Forms.Padding(5)
         Me.txtComprobante2.Name = "txtComprobante2"
         Me.txtComprobante2.Size = New System.Drawing.Size(285, 29)
         Me.txtComprobante2.TabIndex = 6
@@ -163,7 +163,7 @@ Partial Class frmIngesoComprobante
         'txtComprobante1
         '
         Me.txtComprobante1.Location = New System.Drawing.Point(11, 48)
-        Me.txtComprobante1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txtComprobante1.Margin = New System.Windows.Forms.Padding(5)
         Me.txtComprobante1.Name = "txtComprobante1"
         Me.txtComprobante1.Size = New System.Drawing.Size(87, 29)
         Me.txtComprobante1.TabIndex = 5
@@ -182,7 +182,7 @@ Partial Class frmIngesoComprobante
         '
         Me.cboTipoComprobante.FormattingEnabled = True
         Me.cboTipoComprobante.Location = New System.Drawing.Point(27, 196)
-        Me.cboTipoComprobante.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.cboTipoComprobante.Margin = New System.Windows.Forms.Padding(5)
         Me.cboTipoComprobante.Name = "cboTipoComprobante"
         Me.cboTipoComprobante.Size = New System.Drawing.Size(141, 32)
         Me.cboTipoComprobante.TabIndex = 3
@@ -200,7 +200,7 @@ Partial Class frmIngesoComprobante
         'dtFechaComprobante
         '
         Me.dtFechaComprobante.Location = New System.Drawing.Point(27, 56)
-        Me.dtFechaComprobante.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.dtFechaComprobante.Margin = New System.Windows.Forms.Padding(5)
         Me.dtFechaComprobante.Name = "dtFechaComprobante"
         Me.dtFechaComprobante.Size = New System.Drawing.Size(253, 29)
         Me.dtFechaComprobante.TabIndex = 1
@@ -224,8 +224,12 @@ Partial Class frmIngesoComprobante
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Margin = New System.Windows.Forms.Padding(5)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmIngesoComprobante"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.Text = "frmIngesoComprobante"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

@@ -169,7 +169,11 @@ Partial Class frmTiposGastos
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.ForeColor = System.Drawing.Color.Gainsboro
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmTiposGastos"
+        Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tipos de gastos"
         Me.pnlDatos.ResumeLayout(False)
         Me.pnlDatos.PerformLayout()

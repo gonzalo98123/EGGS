@@ -2,7 +2,7 @@
 Imports System.Data.SqlClient
 Module connectionToSQL
 
-    Public conn As SqlConnection = New SqlConnection("Data Source=DESKTOP-CIB583E\DEFQON1GONZALO;Initial Catalog=EGGS1;Persist Security Info=True;User ID=sa;Password=gon140498;")
+    Public conn As SqlConnection = New SqlConnection("Data Source=USUARIO-2CPT3FU\EGSSERVER;Initial Catalog=EGGS1;Persist Security Info=True;User ID=sa;Password=egs140498;")
     Public comm As New SqlCommand
     Public state As String
 

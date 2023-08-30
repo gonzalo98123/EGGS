@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("EGGS1DataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("EGGS1DataSet3"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class EGGS1DataSet
+Partial Public Class EGGS1DataSet3
     Inherits Global.System.Data.DataSet
     
     Private tablevw_MovimientosPendientesPagos As vw_MovimientosPendientesPagosDataTable
@@ -128,7 +128,7 @@ Partial Public Class EGGS1DataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As EGGS1DataSet = CType(MyBase.Clone,EGGS1DataSet)
+        Dim cln As EGGS1DataSet3 = CType(MyBase.Clone,EGGS1DataSet3)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -199,9 +199,9 @@ Partial Public Class EGGS1DataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "EGGS1DataSet"
+        Me.DataSetName = "EGGS1DataSet3"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/EGGS1DataSet.xsd"
+        Me.Namespace = "http://tempuri.org/EGGS1DataSet3.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tablevw_MovimientosPendientesPagos = New vw_MovimientosPendientesPagosDataTable()
@@ -225,7 +225,7 @@ Partial Public Class EGGS1DataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As EGGS1DataSet = New EGGS1DataSet()
+        Dim ds As EGGS1DataSet3 = New EGGS1DataSet3()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -425,9 +425,9 @@ Partial Public Class EGGS1DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addvw_MovimientosPendientesPagosRow(ByVal FechaMovimiento As Date, ByVal Cantidad As Integer, ByVal Observacion As String, ByVal PrecioVenta As Decimal, ByVal RazonSocial As String, ByVal NombreApellido As String) As vw_MovimientosPendientesPagosRow
+        Public Overloads Function Addvw_MovimientosPendientesPagosRow(ByVal IdMovimientoHuevos As Integer, ByVal FechaMovimiento As Date, ByVal Cantidad As Integer, ByVal Observacion As String, ByVal PrecioVenta As Decimal, ByVal RazonSocial As String, ByVal NombreApellido As String) As vw_MovimientosPendientesPagosRow
             Dim rowvw_MovimientosPendientesPagosRow As vw_MovimientosPendientesPagosRow = CType(Me.NewRow,vw_MovimientosPendientesPagosRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, FechaMovimiento, Cantidad, Observacion, PrecioVenta, RazonSocial, NombreApellido}
+            Dim columnValuesArray() As Object = New Object() {IdMovimientoHuevos, FechaMovimiento, Cantidad, Observacion, PrecioVenta, RazonSocial, NombreApellido}
             rowvw_MovimientosPendientesPagosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowvw_MovimientosPendientesPagosRow)
             Return rowvw_MovimientosPendientesPagosRow
@@ -483,11 +483,7 @@ Partial Public Class EGGS1DataSet
             Me.columnNombreApellido = New Global.System.Data.DataColumn("NombreApellido", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNombreApellido)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdMovimientoHuevos}, true))
-            Me.columnIdMovimientoHuevos.AutoIncrement = true
-            Me.columnIdMovimientoHuevos.AutoIncrementSeed = -1
-            Me.columnIdMovimientoHuevos.AutoIncrementStep = -1
             Me.columnIdMovimientoHuevos.AllowDBNull = false
-            Me.columnIdMovimientoHuevos.ReadOnly = true
             Me.columnIdMovimientoHuevos.Unique = true
             Me.columnObservacion.MaxLength = 100
             Me.columnRazonSocial.MaxLength = 50
@@ -559,7 +555,7 @@ Partial Public Class EGGS1DataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As EGGS1DataSet = New EGGS1DataSet()
+            Dim ds As EGGS1DataSet3 = New EGGS1DataSet3()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -853,7 +849,7 @@ Partial Public Class EGGS1DataSet
     End Class
 End Class
 
-Namespace EGGS1DataSetTableAdapters
+Namespace EGGS1DataSet3TableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -1005,8 +1001,8 @@ Namespace EGGS1DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT IdMovimientoHuevos, FechaMovimiento, Cantidad, Observacion, PrecioVenta, N"& _ 
-                "ombreApellido, RazonSocial FROM vw_MovimientosPendientesPagos"
+            Me._commandCollection(0).CommandText = "SELECT IdMovimientoHuevos, FechaMovimiento, Cantidad, Observacion, PrecioVenta, R"& _ 
+                "azonSocial, NombreApellido FROM dbo.vw_MovimientosPendientesPagos"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -1014,7 +1010,7 @@ Namespace EGGS1DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As EGGS1DataSet.vw_MovimientosPendientesPagosDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As EGGS1DataSet3.vw_MovimientosPendientesPagosDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1027,9 +1023,9 @@ Namespace EGGS1DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As EGGS1DataSet.vw_MovimientosPendientesPagosDataTable
+        Public Overloads Overridable Function GetData() As EGGS1DataSet3.vw_MovimientosPendientesPagosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As EGGS1DataSet.vw_MovimientosPendientesPagosDataTable = New EGGS1DataSet.vw_MovimientosPendientesPagosDataTable()
+            Dim dataTable As EGGS1DataSet3.vw_MovimientosPendientesPagosDataTable = New EGGS1DataSet3.vw_MovimientosPendientesPagosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -1104,7 +1100,7 @@ Namespace EGGS1DataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As EGGS1DataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As EGGS1DataSet3, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             Return result
         End Function
@@ -1114,7 +1110,7 @@ Namespace EGGS1DataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As EGGS1DataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As EGGS1DataSet3, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             Return result
         End Function
@@ -1124,7 +1120,7 @@ Namespace EGGS1DataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As EGGS1DataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As EGGS1DataSet3, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             Return result
         End Function
@@ -1160,7 +1156,7 @@ Namespace EGGS1DataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As EGGS1DataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As EGGS1DataSet3) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If

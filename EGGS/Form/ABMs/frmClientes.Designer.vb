@@ -135,6 +135,7 @@ Partial Class frmClientes
         '
         'btnCancelar
         '
+        Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Location = New System.Drawing.Point(348, 338)
         Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancelar.Name = "btnCancelar"
@@ -146,6 +147,7 @@ Partial Class frmClientes
         '
         'btnAceptar
         '
+        Me.btnAceptar.ForeColor = System.Drawing.Color.Black
         Me.btnAceptar.Location = New System.Drawing.Point(226, 338)
         Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAceptar.Name = "btnAceptar"
@@ -224,18 +226,22 @@ Partial Class frmClientes
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(857, 445)
+        Me.ClientSize = New System.Drawing.Size(854, 443)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.pnlDatos)
         Me.Controls.Add(Me.lstClientes)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.ForeColor = System.Drawing.Color.White
+        Me.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmClientes"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmClientes"
+        Me.Text = "Clientes"
         Me.pnlDatos.ResumeLayout(False)
         Me.pnlDatos.PerformLayout()
         Me.ResumeLayout(False)

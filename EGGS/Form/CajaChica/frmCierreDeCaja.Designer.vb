@@ -145,7 +145,11 @@ Partial Class frmCierreDeCaja
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.ForeColor = System.Drawing.Color.Gainsboro
         Me.Margin = New System.Windows.Forms.Padding(5)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmCierreDeCaja"
+        Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmCierreDeCaja"
         Me.ResumeLayout(False)
         Me.PerformLayout()

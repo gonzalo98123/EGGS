@@ -96,6 +96,7 @@ Partial Class frmIngresoGallinasMuertas
         Me.MinimizeBox = False
         Me.Name = "frmIngresoGallinasMuertas"
         Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ingreso de gallinas muertas"
         Me.ResumeLayout(False)

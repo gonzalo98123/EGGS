@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="EGGS1DataSet" targetNamespace="http://tempuri.org/EGGS1DataSet.xsd" xmlns:mstns="http://tempuri.org/EGGS1DataSet.xsd" xmlns="http://tempuri.org/EGGS1DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="EGGS1DataSet3" targetNamespace="http://tempuri.org/EGGS1DataSet3.xsd" xmlns:mstns="http://tempuri.org/EGGS1DataSet3.xsd" xmlns="http://tempuri.org/EGGS1DataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="EGGSConnectionString (MySettings)" DbObjectName="EGGS1.dbo.vw_MovimientosPendientesPagos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT IdMovimientoHuevos, FechaMovimiento, Cantidad, Observacion, PrecioVenta, NombreApellido, RazonSocial FROM vw_MovimientosPendientesPagos</CommandText>
+                    <CommandText>SELECT IdMovimientoHuevos, FechaMovimiento, Cantidad, Observacion, PrecioVenta, RazonSocial, NombreApellido FROM dbo.vw_MovimientosPendientesPagos</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -34,13 +34,13 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="EGGS1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="EGGS1DataSet" msprop:Generator_UserDSName="EGGS1DataSet">
+  <xs:element name="EGGS1DataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="EGGS1DataSet3" msprop:Generator_UserDSName="EGGS1DataSet3">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="vw_MovimientosPendientesPagos" msprop:Generator_TableClassName="vw_MovimientosPendientesPagosDataTable" msprop:Generator_TableVarName="tablevw_MovimientosPendientesPagos" msprop:Generator_RowChangedName="vw_MovimientosPendientesPagosRowChanged" msprop:Generator_TablePropName="vw_MovimientosPendientesPagos" msprop:Generator_RowDeletingName="vw_MovimientosPendientesPagosRowDeleting" msprop:Generator_RowChangingName="vw_MovimientosPendientesPagosRowChanging" msprop:Generator_RowEvHandlerName="vw_MovimientosPendientesPagosRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_MovimientosPendientesPagosRowDeleted" msprop:Generator_RowClassName="vw_MovimientosPendientesPagosRow" msprop:Generator_UserTableName="vw_MovimientosPendientesPagos" msprop:Generator_RowEvArgName="vw_MovimientosPendientesPagosRowChangeEvent">
+        <xs:element name="vw_MovimientosPendientesPagos" msprop:Generator_TableClassName="vw_MovimientosPendientesPagosDataTable" msprop:Generator_TableVarName="tablevw_MovimientosPendientesPagos" msprop:Generator_TablePropName="vw_MovimientosPendientesPagos" msprop:Generator_RowDeletingName="vw_MovimientosPendientesPagosRowDeleting" msprop:Generator_RowChangingName="vw_MovimientosPendientesPagosRowChanging" msprop:Generator_RowEvHandlerName="vw_MovimientosPendientesPagosRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_MovimientosPendientesPagosRowDeleted" msprop:Generator_UserTableName="vw_MovimientosPendientesPagos" msprop:Generator_RowChangedName="vw_MovimientosPendientesPagosRowChanged" msprop:Generator_RowEvArgName="vw_MovimientosPendientesPagosRowChangeEvent" msprop:Generator_RowClassName="vw_MovimientosPendientesPagosRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdMovimientoHuevos" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdMovimientoHuevos" msprop:Generator_ColumnPropNameInRow="IdMovimientoHuevos" msprop:Generator_ColumnPropNameInTable="IdMovimientoHuevosColumn" msprop:Generator_UserColumnName="IdMovimientoHuevos" type="xs:int" />
+              <xs:element name="IdMovimientoHuevos" msprop:Generator_ColumnVarNameInTable="columnIdMovimientoHuevos" msprop:Generator_ColumnPropNameInRow="IdMovimientoHuevos" msprop:Generator_ColumnPropNameInTable="IdMovimientoHuevosColumn" msprop:Generator_UserColumnName="IdMovimientoHuevos" type="xs:int" />
               <xs:element name="FechaMovimiento" msprop:Generator_ColumnVarNameInTable="columnFechaMovimiento" msprop:Generator_ColumnPropNameInRow="FechaMovimiento" msprop:Generator_ColumnPropNameInTable="FechaMovimientoColumn" msprop:Generator_UserColumnName="FechaMovimiento" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
               <xs:element name="Observacion" msprop:Generator_ColumnVarNameInTable="columnObservacion" msprop:Generator_ColumnPropNameInRow="Observacion" msprop:Generator_ColumnPropNameInTable="ObservacionColumn" msprop:Generator_UserColumnName="Observacion" minOccurs="0">

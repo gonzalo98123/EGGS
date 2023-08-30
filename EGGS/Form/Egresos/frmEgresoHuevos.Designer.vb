@@ -320,6 +320,7 @@ Partial Class frmEgresoHuevos
         Me.MinimizeBox = False
         Me.Name = "frmEgresoHuevos"
         Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Egreso Huevos"
         Me.ResumeLayout(False)

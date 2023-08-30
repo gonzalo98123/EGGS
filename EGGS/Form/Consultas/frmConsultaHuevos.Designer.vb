@@ -91,6 +91,7 @@ Partial Class frmConsultaHuevos
         Me.MinimizeBox = False
         Me.Name = "frmConsultaHuevos"
         Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consulta Huevos"
         Me.ResumeLayout(False)

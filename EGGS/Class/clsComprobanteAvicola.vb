@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class clsComprobanteAvicola
-    Private ID_COMPROBANTE As Integer
+    Private ID_MOVIMIENTOHUEVOS As Integer
     Private FECHA_COMPROBANTE As Date
     Private _COMPROBANTE As String
     Private ID_TIPO_COMPROBANTE As Integer
@@ -12,12 +12,12 @@ Public Class clsComprobanteAvicola
     Dim dt As DataTable
     Dim da As SqlDataAdapter
 
-    Public Property idComprobante As Integer
+    Public Property idMovimientosHuevos As Integer
         Get
-            Return ID_COMPROBANTE
+            Return ID_MOVIMIENTOHUEVOS
         End Get
         Set(value As Integer)
-            ID_COMPROBANTE = value
+            ID_MOVIMIENTOHUEVOS = value
         End Set
     End Property
 
@@ -125,6 +125,26 @@ Public Class clsComprobanteAvicola
 
     End Function
 
+    Public Function marcarComoPagado()
+
+        Try
+            connect()
+            'ingresamos el metodo con los parametros correspondientes
+            comm = New SqlCommand("sp_MarcarPagoComprobante", conn)
+            comm.CommandType = CommandType.StoredProcedure
+            'Parametros para el stored procedure
+            comm.Parameters.AddWithValue("@id", ID_MOVIMIENTOHUEVOS)
+
+            'ejecuta
+            comm.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            disconnect()
+        End Try
+
+    End Function
 
 
 

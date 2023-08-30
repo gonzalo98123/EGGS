@@ -14,6 +14,7 @@
         lstClientes.ValueMember = "IdCliente"
         lstClientes.DisplayMember = "RazonSocial"
 
+
     End Sub
 
     Private Sub lstVendedores_SelectedValueChanged(sender As Object, e As EventArgs) Handles lstClientes.SelectedValueChanged
